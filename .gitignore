@@ -1,0 +1,25 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.vscode/
+*.log
+env/
+.env
+*.bak
+[Bb]uild/
+*.tmp
+*.swp
+# Images generated during build
+**/dist/
+
+# Windows
+desktop.ini
+
+# npm debug
+npm-debug.log*
+
+# User-specific
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
