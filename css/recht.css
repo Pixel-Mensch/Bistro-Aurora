@@ -1,0 +1,18 @@
+/* recht.css – Impressum & Datenschutz */
+
+.section.legal {
+  background-color: var(--bg-dark);
+}
+
+.section.legal h2 {
+  margin-top: 1.5rem;
+}
+
+.section.legal h2:first-of-type {
+  margin-top: 0;
+}
+
+.section.legal p {
+  color: var(--text-muted);
+  max-width: 720px;
+}

@@ -1,0 +1,179 @@
+/* kontakt.css – Kontakt & Reservierung */
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.2rem;
+}
+
+.contact-info h2 {
+  margin-top: 0;
+}
+
+.contact-info p {
+  color: var(--text-muted);
+}
+
+/* Info-Grid: Adresse / Telefon / Öffnungszeiten */
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.2rem;
+  margin: 1.5rem 0 1.8rem;
+}
+
+.info-item h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.info-item p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.info-item a {
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.info-item a:hover {
+  text-decoration: underline;
+}
+
+/* Karte / Google Maps */
+
+.map-placeholder {
+  border-radius: 1rem;
+  border: 1px dashed var(--border-soft);
+  padding: 1rem 1rem 1.1rem;
+  background-color: #0b1017;
+  color: var(--text-muted);
+  font-size: 0.94rem;
+}
+
+.map-placeholder p {
+  margin: 0 0 0.7rem;
+}
+
+.map-frame {
+  position: relative;
+  width: 100%;
+  /* 16:9 Verhältnis */
+  padding-bottom: 56.25%;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.map-frame iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Formular */
+
+.contact-form-wrapper h2 {
+  margin-top: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  max-width: 640px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border-radius: 0.9rem;
+  border: 1px solid var(--border-soft);
+  background-color: #0d141c;
+  color: var(--text-light);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease,
+    background-color 0.18s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #6f7a87;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--accent);
+  background-color: #0b1017;
+  box-shadow: 0 0 0 1px rgba(244, 176, 106, 0.4);
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+/* CTA Block unten */
+
+.contact-cta {
+  margin-top: 2.8rem;
+  padding: 1.6rem 1.4rem;
+  border-radius: 1.1rem;
+  border: 1px solid var(--border-soft);
+  background: radial-gradient(circle at top, var(--accent-soft), transparent),
+    var(--bg-card);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.38);
+}
+
+.contact-cta h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.4rem;
+}
+
+.cta-item h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.cta-item p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+/* Breakpoints Kontakt */
+
+@media (min-width: 720px) {
+  .contact-layout {
+    grid-template-columns: 1.1fr 1fr;
+    align-items: flex-start;
+  }
+
+  .info-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .contact-cta {
+    padding: 1.8rem 1.7rem;
+  }
+
+  .cta-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
