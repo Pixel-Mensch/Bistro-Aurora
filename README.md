@@ -1,51 +1,51 @@
-# Bistro Aurora — Beispiel-Website
+# Bistro Aurora – Beispiel-Website
 
-Dieses Repository enthält die statischen Seiten einer Beispiel-Website für ein kleines Bistro namens "Bistro Aurora" (HTML, CSS und Bilder).
+Dies ist eine statische Beispiel-Website für ein fiktives Bistro in Dortmund: **„Bistro Aurora“**.  
+Sie dient als Portfolio-Projekt und zeigt Aufbau, Struktur und Design einer kleinen, aber hochwertigen Gastro-Website.
 
-Inhalt:
-- `index.html` — Startseite
-- `speisekarte.html` — Speisekarte
-- `ueber-uns.html` — Über uns
-- `galerie.html` — Galerie mit Bildern
-- `kontakt.html` — Kontakt / Reservierung (Frontend)
-- `css/` — Stylesheets
-- `Bilder/` — Fotos (aktuell als JPG)
+## Inhalt
 
-Kurzanleitung
+- `index.html` – Startseite mit Hero, Intro, Highlights und Gästestimmen
+- `ueber-uns.html` – Über uns, Story des Bistros und Team
+- `speisekarte.html` – Auszug der Speisekarte mit Kategorien und Badges
+- `galerie.html` – Bildergalerie (Innenraum, Gerichte, Atmosphäre)
+- `kontakt.html` – Kontakt & Reservierung mit Formular und eingebetteter Karte
+- `impressum.html` – Rechtliche Angaben gemäß § 5 TMG
+- `datenschutz.html` – Datenschutzerklärung (Basis-Variante)
 
-1) Lokales Git (bereits initialisiert):
-   - `git status` — Status prüfen
-   - `git add .` und `git commit -m "Initial commit"` — Änderungen committen
+Zusätzliche Ordner:
 
-2) Auf GitHub hochladen (manuell):
-   - Erstellen Sie ein neues Repository auf GitHub (z. B. `bistro-aurora`).
-   - Kopieren Sie die Remote-URL (HTTPS oder SSH).
-   - Fügen Sie die Remote hinzu und pushen:
+- `css/` – Stylesheets (mobile-first, modular je Seite)
+  - `mainstyles.css` – globale Basisstyles (Layout, Farben, Navigation, Footer)
+  - `home.css` – Startseite
+  - `ueber-uns.css` – Über uns
+  - `speisekarte.css` – Speisekarte
+  - `galerie.css` – Galerie
+  - `kontakt.css` – Kontakt
+  - `recht.css` – Impressum & Datenschutz
+- `Bilder/` – Beispielbilder für Hero, Galerie und Favicons
 
-```powershell
-cd "c:\Users\marck\Desktop\Pixelmensch_Ordnerstruktur\02_WEBSEITEN\Beispiel-Webseiten\bistro-aurora"
-# Beispiel mit HTTPS
-git remote add origin https://github.com/<Ihr-Benutzername>/bistro-aurora.git
-git branch -M main
-git push -u origin main
-```
+## Features
 
-3) Optional: Mit GitHub CLI automatisch erstellen (wenn installiert):
+- **Mobile-first Layout** mit CSS Grid und flexiblen Sektionen
+- **Einheitliches Design** über alle Unterseiten (Navigation, Header, Footer)
+- **SEO-Grundlagen**:
+  - Sinnvolle Seitentitel
+  - Meta-Descriptions
+  - Open-Graph-Tags pro Seite
+- **Strukturierte Inhalte**:
+  - Klar getrennte HTML-Dateien je Unterseite
+  - Semantische Tags (`header`, `main`, `section`, `footer`)
+- **Rechtliche Basis-Seiten**:
+  - Impressum
+  - Datenschutzerklärung (ohne Anspruch auf Rechtsberatung)
 
-```powershell
-cd "c:\Users\marck\Desktop\Pixelmensch_Ordnerstruktur\02_WEBSEITEN\Beispiel-Webseiten\bistro-aurora"
-gh repo create <Ihr-Benutzername>/bistro-aurora --public --source=. --remote=origin --push
-```
+## Projekt lokal öffnen
 
-Weitere Hinweise
+Du brauchst keinen Build-Step oder Node.js – es ist eine reine HTML/CSS-Seite.
 
-- Bilder optimieren: Konvertieren Sie die JPGs in WebP (z. B. mit `cwebp`) und prüfen Sie die Datei-Größen.
-- Backend für Reservierungen: `kontakt.html` enthält nur ein Frontend-Formular. Implementieren Sie serverseitig ein POST-Endpoint (`/reserve`) oder nutzen Sie einen Drittanbieter (z. B. Formspree, Netlify Forms).
-- Datenschutz: Überprüfen Sie `datenschutz.html` und `impressum.html` bevor Sie die Seite veröffentlichen.
-
-Wenn Sie möchten, kann ich:
-- das Repository automatisch zu GitHub erstellen und pushen (benötigt `gh` und Ihre Zustimmung),
-- ein kleines Node.js-Beispiel-Backend zum Empfangen der Formular-POSTs hinzufügen,
-- ein PowerShell-Skript zur WebP-Konvertierung der Bilder erstellen.
-
-Sagen Sie mir kurz, welche(s) der obigen Schritte ich ausführen soll.
+1. Projektordner klonen oder herunterladen:
+   ```bash
+   git clone https://github.com/<dein-benutzername>/bistro-aurora.git
+   cd bistro-aurora
+   ```
