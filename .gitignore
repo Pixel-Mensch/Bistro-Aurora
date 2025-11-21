@@ -1,25 +1,31 @@
+```gitignore
+# Betriebssystem-spezifische Dateien
 .DS_Store
 Thumbs.db
-node_modules/
-.vscode/
-*.log
-env/
-.env
-*.bak
-[Bb]uild/
-*.tmp
-*.swp
-# Images generated during build
-**/dist/
-
-# Windows
 desktop.ini
 
-# npm debug
-npm-debug.log*
+# Node / Build-Tools
+node_modules/
+[Bb]uild/
+dist/
+*.tmp
 
-# User-specific
+# Editor-/IDE-Einstellungen
+.vscode/
+.idea/
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
+
+# Logs
+*.log
+npm-debug.log*
+
+# Umgebungsvariablen / lokale Config
+.env
+env/
+
+# Swap / temporäre Dateien
+*.swp
+*.bak
