@@ -3,132 +3,229 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Über uns – Bistro Aurora Dortmund</title>
-
+    <title>Über uns – Bistro Aurora</title>
     <meta
       name="description"
-      content="Erfahren Sie mehr über das Bistro Aurora in Dortmund: Unsere Geschichte, Werte und das Team, das für unvergessliche Abende sorgt."
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0f1418" />
-
-    <!-- Open Graph -->
-    <meta
-      property="og:title"
-      content="Über das Bistro Aurora – Unsere Geschichte"
-    />
-    <meta
-      property="og:description"
-      content="Von der Idee zum Lieblingsort: Moderne Küche, frische Zutaten und eine entspannte Atmosphäre im Bistro Aurora Dortmund."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://www.bistro-aurora.de/ueber-uns.html"
-    />
-    <meta
-      property="og:image"
-      content="https://www.bistro-aurora.de/Bilder/bistro1.jpg"
+      content="Lerne das Team, die Geschichte und die Philosophie hinter dem Bistro Aurora kennen. Ein Ort mit Herz, Geschmack und warmem Licht."
     />
 
-    <!-- Fonts & Styles -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/mainstyles.css" />
-    <link rel="stylesheet" href="css/ueber-uns.css" />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-
   <body>
-    <header class="page-header">
-      <nav class="nav">
-        <h1 class="logo">Bistro Aurora</h1>
-        <ul>
-          <li><a href="index.html">Startseite</a></li>
-          <li><a href="ueber-uns.html" class="active">Über uns</a></li>
-          <li><a href="speisekarte.html">Speisekarte</a></li>
-          <li><a href="galerie.html">Galerie</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">BA</span>
+          <span class="logo-text">
+            Bistro <span class="logo-highlight">Aurora</span>
+          </span>
+        </a>
 
-      <div class="page-hero inner">
-        <h2>Über uns</h2>
-        <p>
-          Ein Blick hinter die Kulissen – unsere Geschichte, unsere Küche und
-          unsere Werte.
-        </p>
+        <button
+          class="nav-toggle"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="ueber-uns.html" class="is-active">Über uns</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main>
-      <section class="section about">
-        <div class="inner about-grid">
-          <div>
-            <h2>Unsere Geschichte</h2>
+      <!-- HERO -->
+      <section class="section about-hero">
+        <div class="container about-hero-inner">
+          <div class="about-hero-text">
+            <p class="eyebrow">Unsere Geschichte</p>
+            <h1>Ein kleines Bistro mit großem Herz</h1>
             <p>
-              Das Bistro Aurora ist aus einem einfachen Gedanken entstanden: Ein
-              Ort zu sein, an dem man sich ab dem ersten Schritt willkommen
-              fühlt. Mit einem kleinen Team, großer Leidenschaft und einem Hang
-              zu guten Zutaten haben wir einen Raum geschaffen, der zum Ankommen
-              einlädt.
-            </p>
-            <p>
-              Wir verbinden moderne europäische Küche mit vertrauten Klassikern
-              und setzen dabei auf frische, saisonale Produkte. Unsere Karte ist
-              bewusst übersichtlich gehalten – dafür steckt in jedem Gericht
-              umso mehr Liebe zum Detail.
+              Bistro Aurora ist ein Herzensprojekt: ein Ort, an dem gutes Essen,
+              warme Atmosphäre und echte Gastfreundschaft zusammenfinden. Kein
+              Lärm, keine Hetze – nur ehrliche Küche und Abende, die man gern
+              ein Stück länger macht.
             </p>
           </div>
-          <aside class="about-highlight">
-            <h3>Wofür wir stehen</h3>
-            <ul>
-              <li>Frische, saisonale Zutaten</li>
-              <li>Eine entspannte, warme Atmosphäre</li>
-              <li>Aufmerksamer Service ohne steif zu sein</li>
-              <li>Abende, an die man sich gern erinnert</li>
-            </ul>
-          </aside>
+
+          <figure class="about-hero-image">
+            <img
+              src="Bilder/interior-1.jpg"
+              alt="Warm beleuchtetes Bistro Aurora mit Holz und Kupferdetails"
+            />
+          </figure>
         </div>
       </section>
 
-      <section class="section team">
-        <div class="inner">
-          <h2>Das Team hinter Aurora</h2>
-          <p class="section-intro">
-            Hinter jedem Gericht und jedem Service stehen Menschen, die ihren
-            Beruf mit Leidenschaft leben.
-          </p>
-          <div class="team-grid">
-            <article class="team-card">
-              <h3>Lea – Küchenchefin</h3>
+      <!-- PHILOSOPHIE -->
+      <section class="section about-philosophy">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Unser Konzept</p>
+            <h2>Wärme, Geschmack und Ruhe</h2>
+            <p>
+              Wir möchten einen Ort schaffen, an dem man sich fallen lassen kann
+              – mit Gerichten, die wir selbst lieben, und Zutaten, die für sich
+              sprechen. Keine Massenware, keine überladenen Karten – nur
+              ehrliche Qualität.
+            </p>
+          </header>
+
+          <div class="card-grid">
+            <article class="card">
+              <div class="card-icon">🍽️</div>
+              <h3>Liebe zum Detail</h3>
               <p>
-                Liebt klare Aromen, gute Produkte und das Spiel mit Kontrasten
-                auf dem Teller. Verantwortlich für unsere wechselnde
-                Wochenkarte.
+                Jedes Gericht wird frisch zubereitet – mit saisonalen Zutaten
+                und klaren Aromen.
               </p>
             </article>
-            <article class="team-card">
-              <h3>Jonas – Service & Gastgeber</h3>
+
+            <article class="card">
+              <div class="card-icon">✨</div>
+              <h3>Atmosphäre</h3>
               <p>
-                Immer aufmerksam, nie aufdringlich. Jonas sorgt dafür, dass sich
-                jeder Gast willkommen fühlt und der Abend rund wird.
+                Warm abgestimmtes Licht, natürliche Materialien, ruhige Musik –
+                einfach ankommen.
               </p>
             </article>
+
+            <article class="card">
+              <div class="card-icon">🤝</div>
+              <h3>Gastfreundschaft</h3>
+              <p>
+                Wir möchten, dass du dich bei uns fühlst, als wärst du bei
+                Freunden zu Gast.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIMELINE -->
+      <section class="section about-timeline">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Seit 2024</p>
+            <h2>Wie Aurora entstand</h2>
+          </header>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <h3>2022 – Die Idee</h3>
+              <p>
+                Der Wunsch nach einem kleinen, warmen Bistro abseits des Trubels
+                wurde geboren.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>2023 – Planung & Aufbau</h3>
+              <p>
+                Design, Umbau, Auswahl der Lieferanten und Entwicklung unserer
+                Karte.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>2024 – Eröffnung</h3>
+              <p>
+                Bistro Aurora öffnet seine Türen – gemütlich, klein und voller
+                Herz.
+              </p>
+            </div>
+
+            <div class="timeline-item">
+              <h3>Heute</h3>
+              <p>
+                Ein Ort für ruhige Abende, gutes Essen und unaufgeregte
+                Gastfreundschaft.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TEAM -->
+      <section class="section about-team">
+        <div class="container feature-grid">
+          <div class="feature-text">
+            <p class="eyebrow">Das Team</p>
+            <h2>Menschen, die Aurora tragen</h2>
+            <p>
+              Unser kleines Team arbeitet eng zusammen – jede Person bringt ihre
+              Leidenschaft ein: Küche, Service, Drinks, Atmosphäre. Gemeinsam
+              sorgen wir dafür, dass du dich wohlfühlst.
+            </p>
+          </div>
+
+          <figure class="feature-media">
+            <img
+              src="Bilder/team-1.jpg"
+              alt="Teamfoto vom Bistro Aurora – herzlich, freundlich, warmes Licht"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section-cta">
+        <div class="container cta-box">
+          <div class="cta-text">
+            <h2>Lust, uns zu besuchen?</h2>
+            <p>
+              Wir freuen uns auf dich – egal ob für ein ruhiges Abendessen oder
+              ein Glas Wein.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="kontakt.html" class="btn-primary">Reservierung anfragen</a>
+            <a href="speisekarte.html" class="btn-ghost">Speisekarte ansehen</a>
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer">
-      <p>© 2025 Bistro Aurora. Alle Rechte vorbehalten.</p>
-      <p>
-        <a href="impressum.html">Impressum</a> ·
-        <a href="datenschutz.html">Datenschutz</a>
-      </p>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Bistro Aurora</h3>
+          <p>Aurora-Platz 7 · 44135 Dortmund<br />Tel.: 0231 / 123 456 78</p>
+        </div>
+        <div>
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <p>
+            Mo–Fr: 11:30 – 22:00 Uhr<br />Sa: 10:00 – 23:00 Uhr · So: Ruhetag
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Bistro Aurora · Fiktives Projekt für Portfolio-Zwecke</p>
+      </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

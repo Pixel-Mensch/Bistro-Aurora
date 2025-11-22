@@ -3,259 +3,313 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>
-      Bistro Aurora – Modernes Bistro in Dortmund mit gemütlicher Atmosphäre
-    </title>
-
+    <title>Bistro Aurora – Dein Wohlfühl-Bistro in Dortmund</title>
     <meta
       name="description"
-      content="Bistro Aurora in Dortmund: Moderne Küche, gemütliches Ambiente, frische Zutaten und warme Atmosphäre. Perfekt für Abende mit Freunden, Dates und besondere Anlässe."
+      content="Bistro Aurora in Dortmund: warme Atmosphäre, hausgemachte Gerichte, guter Kaffee und entspannte Abende. Jetzt entdecken und reservieren."
     />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0f1418" />
 
     <!-- Open Graph -->
     <meta
       property="og:title"
-      content="Bistro Aurora – Genuss & Atmosphäre in Dortmund"
+      content="Bistro Aurora – Dein Wohlfühl-Bistro in Dortmund"
     />
     <meta
       property="og:description"
-      content="Ein Ort für Abende, an die man sich erinnert: frische Küche, warme Lichter und entspannte Stimmung im Bistro Aurora."
+      content="Warme Atmosphäre, hausgemachte Küche und entspannte Abende im Bistro Aurora."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.bistro-aurora.de/" />
     <meta
-      property="og:image"
-      content="https://www.bistro-aurora.de/Bilder/hero-bistro.jpg"
+      property="og:url"
+      content="https://pixel-mensch.github.io/Bistro-Aurora/"
     />
+    <meta property="og:image" content="Bilder/hero-aurora.jpg" />
 
-    <!-- Fonts & Styles -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/mainstyles.css" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="Bilder/apple-touch-icon.png"
-    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Favicon (optional) -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="Bilder/favicon-32.png"
     />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="Bilder/favicon-16.png"
-    />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Restaurant",
-        "name": "Bistro Aurora",
-        "image": "https://www.bistro-aurora.de/Bilder/hero-bistro.jpg",
-        "@id": "https://www.bistro-aurora.de/",
-        "url": "https://www.bistro-aurora.de/",
-        "telephone": "+49-231-123456",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Bergstraße 12",
-          "postalCode": "44147",
-          "addressLocality": "Dortmund",
-          "addressCountry": "DE"
-        },
-        "servesCuisine": "Europäische Küche",
-        "priceRange": "€€",
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday"
-            ],
-            "opens": "10:00",
-            "closes": "22:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Saturday", "Sunday"],
-            "opens": "12:00",
-            "closes": "23:00"
-          }
-        ]
-      }
-    </script>
   </head>
-
   <body>
-    <header class="hero hero-home">
-      <div class="overlay"></div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">BA</span>
+          <span class="logo-text">
+            Bistro <span class="logo-highlight">Aurora</span>
+          </span>
+        </a>
 
-      <nav class="nav">
-        <h1 class="logo">Bistro Aurora</h1>
-        <ul>
-          <li><a href="index.html" class="active">Startseite</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
-          <li><a href="speisekarte.html">Speisekarte</a></li>
-          <li><a href="galerie.html">Galerie</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
+        <button
+          class="nav-toggle"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
 
-      <div class="hero-content">
-        <h2>Willkommen im Bistro Aurora</h2>
-        <p>
-          Genuss, der bleibt. Ein Ort für Abende, an die man sich gern erinnert.
-        </p>
-        <a href="kontakt.html" class="btn-primary">Tisch reservieren</a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html" class="is-active">Start</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main>
-      <!-- Einleitung / Story -->
-      <section class="section about">
-        <div class="inner">
-          <h2>Ein Abend im richtigen Licht</h2>
-          <p>
-            Zwischen warmen Lichtern, leiser Musik und dem Duft frisch
-            zubereiteter Gerichte wird aus einem einfachen Abend ein kleines
-            Highlight. Im Bistro Aurora verbinden wir moderne Küche mit einem
-            gemütlichen Ambiente, in dem man bleiben möchte.
-          </p>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">Dortmund · Seit 2024</div>
+            <h1>
+              Warme Abende im <span class="text-accent">Bistro Aurora</span>
+            </h1>
+            <p class="hero-lead">
+              Ein kleiner Ort mit großem Herz: hausgemachte Gerichte, gute
+              Drinks und eine Atmosphäre, in der man den Tag einfach hinter sich
+              lassen kann.
+            </p>
+
+            <div class="hero-meta">
+              <div>
+                <h2>Öffnungszeiten</h2>
+                <p>
+                  Mo–Fr: 11:30 – 22:00 Uhr<br />Sa: 10:00 – 23:00 Uhr · So:
+                  Ruhetag
+                </p>
+              </div>
+              <div>
+                <h2>Adresse</h2>
+                <p>Aurora-Platz 7<br />44135 Dortmund</p>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <a href="kontakt.html" class="btn-primary"
+                >Jetzt Tisch reservieren</a
+              >
+              <a href="speisekarte.html" class="btn-ghost"
+                >Speisekarte ansehen</a
+              >
+            </div>
+
+            <p class="hero-note">
+              ✨ Ideal für Date Night, kleine Feiern und entspannte
+              After-Work-Drinks.
+            </p>
+          </div>
+
+          <div class="hero-media">
+            <figure class="hero-main-image">
+              <img
+                src="Bilder/hero-aurora.jpg"
+                alt="Stimmungsvolles Bistro mit warmem Licht und gedeckten Tischen"
+              />
+              <figcaption>
+                Goldenes Licht, leise Musik, entspannte Gespräche.
+              </figcaption>
+            </figure>
+
+            <div class="hero-gallery-mini">
+              <figure>
+                <img
+                  src="Bilder/gericht-1.jpg"
+                  alt="Hausgemachtes Gericht im Bistro Aurora"
+                />
+                <figcaption>Frisch & hausgemacht</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="Bilder/gericht-2.jpg"
+                  alt="Dessert im Bistro Aurora"
+                />
+                <figcaption>Desserts mit Liebe</figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="Bilder/drinks-1.jpg"
+                  alt="Drinks an der Bar im Bistro Aurora"
+                />
+                <figcaption>Feine Drinks</figcaption>
+              </figure>
+            </div>
+          </div>
         </div>
       </section>
 
-      <!-- Warum Bistro Aurora -->
-      <section class="section why">
-        <div class="inner">
-          <h2>Warum Bistro Aurora?</h2>
-          <p class="section-intro">
-            Es gibt viele Orte zum Essen, aber nur wenige, an denen sich ein
-            Abend rund anfühlt.
-          </p>
+      <!-- HIGHLIGHTS -->
+      <section class="section section-highlights">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Was dich bei uns erwartet</p>
+            <h2>Wohlfühl-Bistro mit Charakter</h2>
+            <p>
+              Bistro Aurora ist kein Massenbetrieb. Wir setzen auf wenige,
+              ausgewählte Gerichte, gute Zutaten und eine Atmosphäre, die sich
+              eher nach Wohnzimmer als nach Gastronomie fühlt.
+            </p>
+          </header>
 
-          <div class="home-grid">
-            <article class="home-card">
-              <h3>Frisch und saisonal</h3>
+          <div class="card-grid">
+            <article class="card">
+              <div class="card-icon">☕</div>
+              <h3>Warme Atmosphäre</h3>
               <p>
-                Wir arbeiten mit ausgewählten Zutaten und passen unsere Karte
-                regelmäßig an die Saison an. Weniger Masse, mehr Qualität.
+                Warm abgestimmtes Licht, natürliche Materialien, leise Musik –
+                perfekt, um durchzuatmen.
               </p>
             </article>
 
-            <article class="home-card">
-              <h3>Wohlfühlatmosphäre</h3>
+            <article class="card">
+              <div class="card-icon">🍝</div>
+              <h3>Hausgemachte Küche</h3>
               <p>
-                Gedimmtes Licht, warme Farben und ein Team, das präsent ist,
-                ohne aufdringlich zu sein. Ideal für Dates oder Abende mit
-                Freunden.
+                Eine kleine, wechselnde Karte mit regionalen Produkten und
+                ehrlichen Gerichten.
               </p>
             </article>
 
-            <article class="home-card">
-              <h3>Persönliche Betreuung</h3>
+            <article class="card">
+              <div class="card-icon">🥂</div>
+              <h3>Abende mit Freunden</h3>
               <p>
-                Keine anonyme Gastronomie. Wir kennen viele unserer Gäste beim
-                Namen und möchten, dass man sich wie bei einem Besuch bei
-                Freunden fühlt.
+                Ob Date Night oder Feier im kleinen Kreis – wir sorgen für den
+                passenden Rahmen.
               </p>
             </article>
           </div>
         </div>
       </section>
 
-      <!-- Highlights / Weiterführende Links -->
-      <section class="section home-highlights">
-        <div class="inner home-grid">
-          <article class="home-card">
-            <h3>Unsere Küche</h3>
+      <!-- FEATURE -->
+      <section class="section section-feature">
+        <div class="container feature-grid">
+          <div class="feature-text">
+            <p class="eyebrow">Signature-Abende</p>
+            <h2>„Aurora Nights“ – unser Special</h2>
             <p>
-              Ausgewählte Klassiker und moderne Gerichte. Klar im Geschmack,
-              liebevoll angerichtet und immer mit einem Auge fürs Detail.
+              Jeden ersten Samstag im Monat verwandelt sich das Bistro in einen
+              kleinen Wohnzimmer-Club: mehr Gänge, mehr Kerzen, mehr Zeit.
+              Ideal, um sich etwas Besonderes zu gönnen – ohne steifen
+              Fine-Dining-Charakter.
             </p>
-            <a href="speisekarte.html" class="home-link">Speisekarte ansehen</a>
-          </article>
+            <ul class="feature-list">
+              <li>3-Gang-Menü mit vegetarischer Alternative</li>
+              <li>Fein abgestimmte Wein- und Drinkbegleitung</li>
+              <li>Limitierte Plätze · Reservierung empfohlen</li>
+            </ul>
 
-          <article class="home-card">
-            <h3>Ambiente</h3>
-            <p>
-              Ob kleiner Zweiertisch oder Runde mit Freundinnen und Freunden:
-              Unsere Räume sind so gestaltet, dass man sich wohlfühlt.
-            </p>
-            <a href="galerie.html" class="home-link">Einblicke bekommen</a>
-          </article>
+            <a href="kontakt.html" class="btn-primary btn-small"
+              >Platz für Aurora Night anfragen</a
+            >
+          </div>
 
-          <article class="home-card">
-            <h3>Anlässe & Events</h3>
-            <p>
-              Sie planen einen Geburtstag, ein Teamdinner oder einen besonderen
-              Abend? Sprechen Sie uns an, wir finden das passende Setting.
-            </p>
-            <a href="kontakt.html" class="home-link">Anfrage stellen</a>
-          </article>
+          <div class="feature-media">
+            <img
+              src="Bilder/interior-1.jpg"
+              alt="Kerzenschein und gedeckte Tische im Bistro Aurora"
+            />
+          </div>
         </div>
       </section>
 
-      <!-- Gästestimmen -->
-      <section class="section testimonials">
-        <div class="inner">
-          <h2>Stimmen unserer Gäste</h2>
-          <p class="section-intro">
-            Ein kleiner Einblick in das, was Gäste über ihren Abend im Bistro
-            Aurora sagen.
-          </p>
+      <!-- REVIEWS -->
+      <section class="section section-reviews">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Stimmen unserer Gäste</p>
+            <h2>„Klein, gemütlich und auf den Punkt.“</h2>
+          </header>
 
-          <div class="testimonials-grid">
-            <article class="testimonial-card">
-              <p class="quote">
-                „Super gemütlich, tolle Weinauswahl und das Essen war auf den
-                Punkt. Wir kommen auf jeden Fall wieder.“
-              </p>
-              <p class="name">Lisa M.</p>
-              <p class="rating">★★★★★</p>
-            </article>
+          <div class="reviews-grid">
+            <figure class="review">
+              <blockquote>
+                „Man hat das Gefühl, die Zeit läuft hier langsamer. Essen top,
+                Service ehrlich und unaufgeregt.“
+              </blockquote>
+              <figcaption>– Jana, Stammgast</figcaption>
+            </figure>
 
-            <article class="testimonial-card">
-              <p class="quote">
-                „Perfekt für ein ruhiges Dinner zu zweit. Nicht laut, sehr
-                aufmerksamer Service und eine kleine, aber feine Karte.“
-              </p>
-              <p class="name">Daniel R.</p>
-              <p class="rating">★★★★★</p>
-            </article>
+            <figure class="review">
+              <blockquote>
+                „Perfekt für ein Date. Nicht laut, nicht steif – einfach
+                angenehm. Die Pasta war überragend.“
+              </blockquote>
+              <figcaption>– Mehmet</figcaption>
+            </figure>
 
-            <article class="testimonial-card">
-              <p class="quote">
-                „Wir haben hier unseren Geburtstag mit zehn Personen gefeiert.
-                Alles lief entspannt und die Stimmung war genau richtig.“
-              </p>
-              <p class="name">Miriam K.</p>
-              <p class="rating">★★★★☆</p>
-            </article>
+            <figure class="review">
+              <blockquote>
+                „Wir haben hier eine kleine Geburtstagsrunde gefeiert. Super
+                unkompliziert, alles hat gepasst.“
+              </blockquote>
+              <figcaption>– Familie Schneider</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section-cta">
+        <div class="container cta-box">
+          <div class="cta-text">
+            <h2>Lust auf einen Abend im Aurora?</h2>
+            <p>
+              Schick uns eine kurze Nachricht mit Datum, Uhrzeit und
+              Personenzahl – wir melden uns so schnell wie möglich zurück.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="kontakt.html" class="btn-primary">Reservierung anfragen</a>
+            <a href="speisekarte.html" class="btn-ghost">Zur Speisekarte</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <p>© 2025 Bistro Aurora. Alle Rechte vorbehalten.</p>
-      <p>
-        <a href="impressum.html">Impressum</a> ·
-        <a href="datenschutz.html">Datenschutz</a>
-      </p>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Bistro Aurora</h3>
+          <p>Aurora-Platz 7 · 44135 Dortmund<br />Tel.: 0231 / 123 456 78</p>
+        </div>
+        <div>
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="reservierung.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <p>
+            Mo–Fr: 11:30 – 22:00 Uhr<br />Sa: 10:00 – 23:00 Uhr · So: Ruhetag
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Bistro Aurora · Fiktives Projekt für Portfolio-Zwecke</p>
+      </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

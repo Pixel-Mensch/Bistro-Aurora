@@ -3,286 +3,408 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Speisekarte – Bistro Aurora Dortmund</title>
-
+    <title>Speisekarte – Bistro Aurora</title>
     <meta
       name="description"
-      content="Entdecken Sie die Speisekarte des Bistro Aurora in Dortmund: Vorspeisen, Hauptgerichte, Desserts und Getränke – mit saisonalen Specials und frischen Zutaten."
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0f1418" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Speisekarte – Bistro Aurora" />
-    <meta
-      property="og:description"
-      content="Ausgewählte Gerichte, hausgemachte Klassiker und saisonale Bowls – ein Einblick in die Küche des Bistro Aurora."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://www.bistro-aurora.de/speisekarte.html"
-    />
-    <meta
-      property="og:image"
-      content="https://www.bistro-aurora.de/Bilder/bistro2.jpg"
+      content="Speisekarte des Bistro Aurora: ausgewählte Vorspeisen, Hauptgerichte, Desserts und Drinks in gemütlicher Atmosphäre."
     />
 
-    <!-- Fonts & Styles -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/mainstyles.css" />
-    <link rel="stylesheet" href="css/speisekarte.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="Bilder/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="Bilder/favicon-32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="Bilder/favicon-16.png"
-    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-
   <body>
-    <header class="page-header">
-      <nav class="nav">
-        <h1 class="logo">Bistro Aurora</h1>
-        <ul>
-          <li><a href="index.html">Startseite</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
-          <li><a href="speisekarte.html" class="active">Speisekarte</a></li>
-          <li><a href="galerie.html">Galerie</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">BA</span>
+          <span class="logo-text">
+            Bistro <span class="logo-highlight">Aurora</span>
+          </span>
+        </a>
 
-      <div class="page-hero inner">
-        <h2>Unsere Speisekarte</h2>
-        <p>
-          Eine Auswahl unserer Gerichte – wechselnde Wochenkarte und Specials
-          ergänzen das Angebot.
-        </p>
+        <button
+          class="nav-toggle"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li>
+              <a href="speisekarte.html" class="is-active">Speisekarte</a>
+            </li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
     <main>
-      <section class="section menu menu-page">
-        <div class="inner">
-          <!-- Legende / Hinweise -->
-          <div class="menu-hint">
+      <!-- HERO -->
+      <section class="section menu-hero">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Unsere Auswahl</p>
+            <h1>Speisekarte</h1>
             <p>
-              <strong>Hinweise:</strong>
-              <span class="legend"
-                ><span class="badge badge-veg">V</span> vegetarisch</span
-              >
-              <span class="legend"
-                ><span class="badge badge-vegan">VG</span> vegan</span
-              >
-              <span class="legend"
-                ><span class="badge badge-new">NEU</span> Empfehlung /
-                Special</span
-              >
+              Eine kleine, bewusst kuratierte Karte mit Gerichten, die wir
+              selbst lieben – frisch gekocht, saisonal gedacht und perfekt für
+              einen entspannten Abend.
             </p>
-            <p class="menu-note">
-              Unsere vollständige Karte und die aktuelle Wochenkarte erhalten
-              Sie direkt im Bistro.
-            </p>
-          </div>
+          </header>
 
-          <!-- Vorspeisen -->
-          <div class="menu-section">
+          <div class="menu-legend">
+            <span>🌱 vegetarisch</span>
+            <span>🜁 vegan</span>
+            <span>★ Empfehlung des Hauses</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- VORSPEISEN -->
+      <section class="section menu-section">
+        <div class="container">
+          <div class="menu-section-header">
             <h2>Vorspeisen</h2>
-            <div class="menu-grid">
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>
-                    Geröstetes Landbrot <span class="badge badge-veg">V</span>
-                  </h3>
-                  <span class="price">6,50 €</span>
-                </div>
-                <p>Mit marinierten Tomaten, Basilikum und Olivenöl.</p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>
-                    Aurora-Salat <span class="badge badge-vegan">VG</span>
-                  </h3>
-                  <span class="price">9,20 €</span>
-                </div>
-                <p>
-                  Blattsalate, Ofengemüse, Kichererbsen, Kräuter, Hausdressing.
-                </p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>Suppe der Saison</h3>
-                  <span class="price">8,50 €</span>
-                </div>
-                <p>
-                  Wechselnde Kreation passend zur Jahreszeit – bitte fragen Sie
-                  unser Team.
-                </p>
-              </article>
-            </div>
+            <p>Kleine Gerichte zum Ankommen, Teilen und Appetit machen.</p>
           </div>
 
-          <!-- Hauptgerichte -->
-          <div class="menu-section">
+          <div class="menu-grid">
+            <article class="menu-item">
+              <div class="menu-item-main">
+                <h3>Geröstete Kürbissuppe ★</h3>
+                <p>
+                  Cremige Suppe mit gerösteten Kürbiskernen, Chili-Öl und einem
+                  Hauch Orange. <span class="menu-tag">🌱</span>
+                </p>
+              </div>
+              <div class="menu-item-price">8,50 €</div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-item-main">
+                <h3>Aurora-Antipasti</h3>
+                <p>
+                  Auswahl eingelegtes Gemüse, Oliven, Ofentomaten und Brot aus
+                  der Region. <span class="menu-tag">🜁</span>
+                </p>
+              </div>
+              <div class="menu-item-price">11,90 €</div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-item-main">
+                <h3>Ziegenkäse aus dem Ofen</h3>
+                <p>
+                  Mit Honig, Thymian, Rote-Bete-Carpaccio und Rucola.
+                  <span class="menu-tag">🌱</span>
+                </p>
+              </div>
+              <div class="menu-item-price">10,50 €</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- HAUPTGERICHTE -->
+      <section class="section menu-section">
+        <div class="container">
+          <div class="menu-section-header">
             <h2>Hauptgerichte</h2>
-            <div class="menu-grid">
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>Pasta Aurora <span class="badge badge-veg">V</span></h3>
-                  <span class="price">13,90 €</span>
-                </div>
-                <p>
-                  Hausgemachte Pasta in Tomaten-Sahne-Sauce mit frischem
-                  Basilikum und Parmesan.
-                </p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>Ofenpizza Rustica</h3>
-                  <span class="price">14,50 €</span>
-                </div>
-                <p>
-                  Dünner Boden, Tomatensugo, Büffelmozzarella, Rucola, Parmesan
-                  und Olivenöl.
-                </p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>
-                    Saisonale Bowl <span class="badge badge-vegan">VG</span>
-                  </h3>
-                  <span class="price">12,80 €</span>
-                </div>
-                <p>
-                  Getreide, frisches Gemüse, Toppings und Dip – vegan oder mit
-                  Hähnchen (+2,50 €).
-                </p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>Aurora-Steak <span class="badge badge-new">NEU</span></h3>
-                  <span class="price">21,50 €</span>
-                </div>
-                <p>
-                  Rumpsteak, Ofenkartoffeln, Kräuterbutter und kleiner
-                  Beilagensalat.
-                </p>
-              </article>
-            </div>
-          </div>
-
-          <!-- Desserts -->
-          <div class="menu-section">
-            <h2>Desserts</h2>
-            <div class="menu-grid">
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>Crème Brûlée</h3>
-                  <span class="price">7,20 €</span>
-                </div>
-                <p>Mit Vanille und karamellisierter Zuckerschicht.</p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>Schokoladenfondant</h3>
-                  <span class="price">7,90 €</span>
-                </div>
-                <p>Warmer Schokokern, Vanilleeis und Beeren.</p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>
-                    Zitronen-Sorbet <span class="badge badge-vegan">VG</span>
-                  </h3>
-                  <span class="price">6,50 €</span>
-                </div>
-                <p>
-                  Frisches Sorbet, auf Wunsch mit einem Schuss Prosecco (+2,50
-                  €).
-                </p>
-              </article>
-            </div>
-          </div>
-
-          <!-- Getränke (Auszug) -->
-          <div class="menu-section">
-            <h2>Getränke (Auszug)</h2>
-            <div class="menu-grid">
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>Hausgemachte Limonade</h3>
-                  <span class="price">4,50 €</span>
-                </div>
-                <p>Zitrone-Ingwer oder Beere, mit frischen Kräutern.</p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>Weinempfehlung des Hauses</h3>
-                  <span class="price">ab 6,50 €</span>
-                </div>
-                <p>
-                  Wechselnde Auswahl passender Weine im Glas – Empfehlungen
-                  durch unser Team.
-                </p>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-header">
-                  <h3>Aurora-Spritz</h3>
-                  <span class="price">8,20 €</span>
-                </div>
-                <p>
-                  Hauskreation mit spritziger Note – perfekt zum Start in den
-                  Abend.
-                </p>
-              </article>
-            </div>
-          </div>
-
-          <!-- Hinweis Wochenkarte -->
-          <div class="menu-hint menu-hint-bottom">
             <p>
-              <strong>Wochenkarte & Specials:</strong> Zusätzlich zur festen
-              Karte bieten wir eine wechselnde Wochenkarte mit saisonalen
-              Gerichten. Sprechen Sie uns gern an.
+              Wenige, ausgewählte Gerichte – dafür mit viel Liebe zum Detail.
             </p>
+          </div>
+
+          <div class="menu-grid">
+            <article class="menu-item menu-item-with-image">
+              <div class="menu-thumb-wrap">
+                <img
+                  src="Bilder/gericht-1.jpg"
+                  alt="Gebratenes Filet auf Safranrisotto"
+                  class="menu-thumb"
+                />
+              </div>
+              <div class="menu-item-main">
+                <h3>Gebratenes Filet auf Risotto ★</h3>
+                <p>
+                  Zartes Rinderfilet auf cremigem Safranrisotto, Rucola und
+                  Parmesan.
+                </p>
+                <a href="kontakt.html#reservierung" class="menu-link-inline"
+                  >Dazu Tisch reservieren →</a
+                >
+              </div>
+              <div class="menu-item-price">26,90 €</div>
+            </article>
+
+            <article class="menu-item menu-item-with-image">
+              <div class="menu-thumb-wrap">
+                <img
+                  src="Bilder/gericht-2.jpg"
+                  alt="Lachsfilet mit Bohnen und Ofenkartoffeln"
+                  class="menu-thumb"
+                />
+              </div>
+              <div class="menu-item-main">
+                <h3>Lachsfilet „Aurora“</h3>
+                <p>
+                  Knusprig gebratenes Lachsfilet, grüne Bohnen, Ofenkartoffeln
+                  und Kräuter-Sauce.
+                </p>
+                <a href="kontakt.html#reservierung" class="menu-link-inline"
+                  >Dazu Tisch reservieren →</a
+                >
+              </div>
+              <div class="menu-item-price">24,50 €</div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-item-main">
+                <h3>Hausgemachte Pasta mit Pilzen</h3>
+                <p>
+                  Bandnudeln mit gebratenen Kräuterseitlingen, weißem Wein und
+                  Pecorino. <span class="menu-tag">🌱</span>
+                </p>
+                <a href="kontakt.html#reservierung" class="menu-link-inline"
+                  >Reservieren →</a
+                >
+              </div>
+              <div class="menu-item-price">17,90 €</div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-item-main">
+                <h3>Aurora Bowl</h3>
+                <p>
+                  Ofengemüse, Linsen, mariniertes Tofu, Kräuteröl und Sesam.
+                  <span class="menu-tag">🜁</span>
+                </p>
+                <a href="kontakt.html#reservierung" class="menu-link-inline"
+                  >Reservieren →</a
+                >
+              </div>
+              <div class="menu-item-price">16,50 €</div>
+            </article>
+          </div>
+
+          <p class="menu-note">
+            Alle Hauptgerichte werden mit frischem Brot und Butter serviert.
+            Änderungen bei Unverträglichkeiten gern auf Anfrage.
+          </p>
+        </div>
+      </section>
+
+      <!-- DESSERTS -->
+      <section class="section menu-section">
+        <div class="container">
+          <div class="menu-section-header">
+            <h2>Desserts</h2>
+            <p>Zum Abschluss – oder einfach so.</p>
+          </div>
+
+          <div class="menu-grid">
+            <article class="menu-item menu-item-with-image">
+              <div class="menu-thumb-wrap">
+                <img
+                  src="Bilder/dessert-1.jpg"
+                  alt="Schokoladentarte mit Beeren"
+                  class="menu-thumb"
+                />
+              </div>
+              <div class="menu-item-main">
+                <h3>Schokoladentarte mit Beeren ★</h3>
+                <p>
+                  Dunkle Schokolade, frische Beeren, Sahne und knuspriger Boden.
+                  <span class="menu-tag">🌱</span>
+                </p>
+                <a href="galerie.html" class="menu-link-inline"
+                  >Mehr Eindrücke in der Galerie →</a
+                >
+              </div>
+              <div class="menu-item-price">9,50 €</div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-item-main">
+                <h3>Panna Cotta mit Espresso-Karamell</h3>
+                <p>
+                  Sanfte Vanille-Panna-Cotta, Espresso-Karamellsauce und
+                  Kakao-Nibs.
+                </p>
+              </div>
+              <div class="menu-item-price">8,90 €</div>
+            </article>
+
+            <article class="menu-item">
+              <div class="menu-item-main">
+                <h3>Zitronensorbet</h3>
+                <p>
+                  Erfrischendes Sorbet mit Zitronenzeste und Minze.
+                  <span class="menu-tag">🜁</span>
+                </p>
+              </div>
+              <div class="menu-item-price">7,50 €</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- DRINKS -->
+      <section class="section menu-section">
+        <div class="container">
+          <div class="menu-section-header">
+            <h2>Drinks &amp; Weine</h2>
+            <p>Ausgewählte Drinks für entspannte Abende im warmen Licht.</p>
+          </div>
+
+          <div class="menu-drinks-grid">
+            <div class="menu-drinks-column">
+              <h3>Aurora Cocktails</h3>
+              <figure class="menu-drinks-hero">
+                <img
+                  src="Bilder/drinks-1.jpg"
+                  alt="Cocktails an der Bar im Bistro Aurora"
+                  loading="lazy"
+                />
+                <figcaption>
+                  Unsere Drinks sind genauso sorgfältig abgestimmt wie unsere
+                  Gerichte.
+                </figcaption>
+              </figure>
+
+              <article class="menu-item">
+                <div class="menu-item-main">
+                  <h4>Aurora Spritz ★</h4>
+                  <p>Hausaperitif mit Bitterorange, Kräutern und Prosecco.</p>
+                </div>
+                <div class="menu-item-price">10,50 €</div>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item-main">
+                  <h4>Dark &amp; Slow</h4>
+                  <p>
+                    Rum, Limette, Ingwer und brauner Zucker – langsam gerührt.
+                  </p>
+                </div>
+                <div class="menu-item-price">11,50 €</div>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item-main">
+                  <h4>Rosmarin Tonic</h4>
+                  <p>Gin, Tonic, Rosmarin und Grapefruit-Zeste.</p>
+                </div>
+                <div class="menu-item-price">9,90 €</div>
+              </article>
+            </div>
+
+            <div class="menu-drinks-column">
+              <h3>Weine &amp; Alkoholfreies</h3>
+
+              <article class="menu-item">
+                <div class="menu-item-main">
+                  <h4>Weißwein (Glas)</h4>
+                  <p>
+                    Wechselnde, ausgewählte Positionen – frag uns gern nach
+                    Empfehlungen.
+                  </p>
+                </div>
+                <div class="menu-item-price">ab 7,50 €</div>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item-main">
+                  <h4>Rotwein (Glas)</h4>
+                  <p>Kräftig, aber weich – ideal für unsere Hauptgerichte.</p>
+                </div>
+                <div class="menu-item-price">ab 7,90 €</div>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item-main">
+                  <h4>Hausgemachte Limonade</h4>
+                  <p>
+                    Zitrone-Ingwer oder Beere-Minze – ohne Zusatzstoffe.
+                    <span class="menu-tag">🜁</span>
+                  </p>
+                </div>
+                <div class="menu-item-price">5,20 €</div>
+              </article>
+
+              <article class="menu-item">
+                <div class="menu-item-main">
+                  <h4>Kaffee &amp; Espresso</h4>
+                  <p>Direkt gehandelte Bohnen, schonend geröstet.</p>
+                </div>
+                <div class="menu-item-price">ab 2,80 €</div>
+              </article>
+            </div>
+          </div>
+
+          <p class="menu-note menu-note-small">
+            Die Karte kann saisonal wechseln. Alle Preise in Euro, inkl. MwSt.
+          </p>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="section section-cta">
+        <div class="container cta-box">
+          <div class="cta-text">
+            <h2>Dein nächster Abend im Aurora</h2>
+            <p>
+              Reserviere dir einen Tisch und probiere unsere aktuellen Gerichte
+              und Drinks.
+            </p>
+          </div>
+          <div class="cta-actions">
+            <a href="reservierung.html" class="btn-primary"
+              >Reservierung anfragen</a
+            >
+            <a href="#top" class="btn-ghost">Nach oben</a>
           </div>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <p>© 2025 Bistro Aurora. Alle Rechte vorbehalten.</p>
-      <p>
-        <a href="impressum.html">Impressum</a> ·
-        <a href="datenschutz.html">Datenschutz</a>
-      </p>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Bistro Aurora</h3>
+          <p>Aurora-Platz 7 · 44135 Dortmund<br />Tel.: 0231 / 123 456 78</p>
+        </div>
+        <div>
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <p>
+            Mo–Fr: 11:30 – 22:00 Uhr<br />Sa: 10:00 – 23:00 Uhr · So: Ruhetag
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Bistro Aurora · Fiktives Projekt für Portfolio-Zwecke</p>
+      </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

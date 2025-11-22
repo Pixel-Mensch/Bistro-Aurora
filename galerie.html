@@ -3,164 +3,213 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Galerie – Eindrücke aus dem Bistro Aurora</title>
-
+    <title>Galerie – Bistro Aurora</title>
     <meta
       name="description"
-      content="Bilder aus dem Bistro Aurora in Dortmund: Innenbereich, Gerichte, Bar und Atmosphäre – verschaffen Sie sich einen ersten Eindruck."
-    />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0f1418" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Galerie – Bistro Aurora Dortmund" />
-    <meta
-      property="og:description"
-      content="Ein visueller Einblick in das Bistro Aurora: warme Lichter, liebevoll angerichtete Teller und gemütliche Plätze."
-    />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://www.bistro-aurora.de/galerie.html"
-    />
-    <meta
-      property="og:image"
-      content="https://www.bistro-aurora.de/Bilder/bistro3.jpg"
+      content="Einblicke in das Bistro Aurora: Innenraum, Gerichte und Momente mit unseren Gästen."
     />
 
-    <!-- Fonts & Styles -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="css/mainstyles.css" />
-    <link rel="stylesheet" href="css/galerie.css" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="Bilder/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="Bilder/favicon-32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="Bilder/favicon-16.png"
-    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-
   <body>
-    <header class="page-header">
-      <nav class="nav">
-        <h1 class="logo">Bistro Aurora</h1>
-        <ul>
-          <li><a href="index.html">Startseite</a></li>
-          <li><a href="ueber-uns.html">Über uns</a></li>
-          <li><a href="speisekarte.html">Speisekarte</a></li>
-          <li><a href="galerie.html" class="active">Galerie</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">BA</span>
+          <span class="logo-text">
+            Bistro <span class="logo-highlight">Aurora</span>
+          </span>
+        </a>
 
-      <div class="page-hero inner">
-        <h2>Einblicke ins Bistro Aurora</h2>
-        <p>
-          Ambiente, Gerichte und kleine Details – ein Eindruck davon, wie ein
-          Abend bei uns aussieht.
-        </p>
+        <button
+          class="nav-toggle"
+          aria-label="Menü öffnen"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Start</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="galerie.html" class="is-active">Galerie</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
       </div>
     </header>
 
-    <main>
-      <section class="section gallery">
-        <div class="inner">
-          <div class="gallery-grid">
-            <figure class="gallery-item">
-              <img
-                src="Bilder/bistro1.jpg"
-                alt="Innenbereich mit warmem Licht und gedeckten Tischen"
-                loading="lazy"
-              />
-              <figcaption>
-                Der Innenraum am Abend – warmes Licht und gemütliche Plätze.
-              </figcaption>
-            </figure>
+    <main class="gallery-page">
+      <div class="container">
+        <header class="gallery-header">
+          <p class="eyebrow">Einblicke</p>
+          <h1>Galerie</h1>
+          <p>
+            Ein paar Eindrücke aus dem Bistro Aurora – Atmosphäre, Gerichte und
+            kleine Momente.
+          </p>
+        </header>
 
-            <figure class="gallery-item">
-              <img
-                src="Bilder/bistro2.jpg"
-                alt="Frisch angerichtetes Hauptgericht auf dunklem Teller"
-                loading="lazy"
-              />
-              <figcaption>
-                Ein Blick auf eines unserer Hauptgerichte – klar im Geschmack,
-                liebevoll angerichtet.
-              </figcaption>
-            </figure>
+        <section class="gallery-grid">
+          <!-- Item 1 -->
+          <a href="#bild1" class="gallery-item">
+            <img
+              src="Bilder/gallery-1.jpg"
+              alt="Innenraum des Bistro Aurora im warmen Licht" loading="lazy"
+            />
+            <span>Innenraum</span>
+          </a>
 
-            <figure class="gallery-item">
-              <img
-                src="Bilder/bistro3.jpg"
-                alt="Detailaufnahme eines Tisches mit Kerze und Glas"
-                loading="lazy"
-              />
-              <figcaption>
-                Kleine Details, die aus einem Abend etwas Besonderes machen.
-              </figcaption>
-            </figure>
+          <!-- Item 2 -->
+          <a href="#bild2" class="gallery-item">
+            <img
+              src="Bilder/gallery-2.jpg"
+              alt="Gedeckter Tisch mit Wein und Kerzen" loading="lazy"
+            />
+            <span>Gedeckte Tische</span>
+          </a>
 
-            <figure class="gallery-item">
-              <img
-                src="Bilder/bistro4.jpg"
-                alt="Außenbereich des Bistros in der Abenddämmerung"
-                loading="lazy"
-              />
-              <figcaption>
-                Der Außenbereich – perfekt für laue Abende in der warmen
-                Jahreszeit.
-              </figcaption>
-            </figure>
+          <!-- Item 3 -->
+          <a href="#bild3" class="gallery-item">
+            <img
+              src="Bilder/gallery-3.jpg"
+              alt="Hausgemachtes Hauptgericht im Bistro Aurora" loading="lazy"
+            />
+            <span>Hauptgericht</span>
+          </a>
 
-            <figure class="gallery-item">
-              <img
-                src="Bilder/bistro5.jpg"
-                alt="Weingläser und Flaschen an der Bar"
-                loading="lazy"
-              />
-              <figcaption>
-                Ausgewählte Weine und Drinks an unserer Bar.
-              </figcaption>
-            </figure>
+          <!-- Item 4 -->
+          <a href="#bild4" class="gallery-item">
+            <img src="Bilder/gallery-4.jpg" alt="Dessert im Bistro Aurora" loading="lazy" />
+            <span>Dessert</span>
+          </a>
 
-            <figure class="gallery-item">
-              <img
-                src="Bilder/bistro6.jpg"
-                alt="Kerzenlicht und Dekoration auf einem Tisch"
-                loading="lazy"
-              />
-              <figcaption>
-                Kerzenlicht und dezente Deko sorgen für die richtige Stimmung.
-              </figcaption>
-            </figure>
-          </div>
-        </div>
-      </section>
+          <!-- Item 5 -->
+          <a href="#bild5" class="gallery-item">
+            <img
+              src="Bilder/gallery-5.jpg"
+              alt="Auswahl an Drinks an der Bar" loading="lazy"
+            />
+            <span>Drinks</span>
+          </a>
+
+          <!-- Item 6 -->
+          <a href="#bild6" class="gallery-item">
+            <img
+              src="Bilder/gallery-6.jpg"
+              alt="Gäste genießen den Abend im Bistro Aurora" loading="lazy"
+            />
+            <span>Abende im Bistro</span>
+          </a>
+        </section>
+      </div>
     </main>
 
-    <footer class="footer">
-      <p>© 2025 Bistro Aurora. Alle Rechte vorbehalten.</p>
-      <p>
-        <a href="impressum.html">Impressum</a> ·
-        <a href="datenschutz.html">Datenschutz</a>
-      </p>
+    <!-- Lightboxen -->
+    <div id="bild1" class="lightbox">
+      <div class="lightbox-inner">
+        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
+        <img
+          src="Bilder/gallery-1.jpg"
+          alt="Innenraum des Bistro Aurora im warmen Licht" loading="lazy"
+        />
+        <div class="lightbox-caption">
+          Innenraum des Bistro Aurora im warmen Abendlicht.
+        </div>
+      </div>
+    </div>
+
+    <div id="bild2" class="lightbox">
+      <div class="lightbox-inner">
+        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
+        <img
+          src="Bilder/gallery-2.jpg"
+          alt="Gedeckter Tisch mit Wein und Kerzen" loading="lazy"
+        />
+        <div class="lightbox-caption">
+          Gedeckter Tisch mit Wein, Kerzenschein und Details.
+        </div>
+      </div>
+    </div>
+
+    <div id="bild3" class="lightbox">
+      <div class="lightbox-inner">
+        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
+        <img
+          src="Bilder/gallery-3.jpg"
+          alt="Hausgemachtes Hauptgericht im Bistro Aurora" loading="lazy"
+        />
+        <div class="lightbox-caption">
+          Hausgemachtes Hauptgericht – saisonal und frisch.
+        </div>
+      </div>
+    </div>
+
+    <div id="bild4" class="lightbox">
+      <div class="lightbox-inner">
+        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
+        <img src="Bilder/gallery-4.jpg" alt="Dessert im Bistro Aurora" />
+        <div class="lightbox-caption">Desserts mit Liebe angerichtet.</div>
+      </div>
+    </div>
+
+    <div id="bild5" class="lightbox">
+      <div class="lightbox-inner">
+        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
+        <img src="Bilder/gallery-5.jpg" alt="Auswahl an Drinks an der Bar" />
+        <div class="lightbox-caption">
+          Ausgewählte Drinks und Klassiker an der Bar.
+        </div>
+      </div>
+    </div>
+
+    <div id="bild6" class="lightbox">
+      <div class="lightbox-inner">
+        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
+        <img
+          src="Bilder/gallery-6.jpg"
+          alt="Gäste genießen den Abend im Bistro Aurora"
+        />
+        <div class="lightbox-caption">
+          Gäste genießen einen entspannten Abend im Bistro.
+        </div>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>Bistro Aurora</h3>
+          <p>Aurora-Platz 7 · 44135 Dortmund<br />Tel.: 0231 / 123 456 78</p>
+        </div>
+        <div>
+          <h3>Navigation</h3>
+          <ul class="footer-links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="impressum.html">Impressum</a></li>
+            <li><a href="datenschutz.html">Datenschutz</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Öffnungszeiten</h3>
+          <p>
+            Mo–Fr: 11:30 – 22:00 Uhr<br />Sa: 10:00 – 23:00 Uhr · So: Ruhetag
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© Bistro Aurora · Fiktives Projekt für Portfolio-Zwecke</p>
+      </div>
     </footer>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
