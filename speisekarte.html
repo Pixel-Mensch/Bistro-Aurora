@@ -3,15 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Speisekarte – Bistro Aurora</title>
+    <title>Speisekarte &amp; Online-Bestellung – Bistro Aurora</title>
     <meta
       name="description"
-      content="Speisekarte des Bistro Aurora: ausgewählte Vorspeisen, Hauptgerichte, Desserts und Drinks in gemütlicher Atmosphäre."
+      content="Speisekarte des Bistro Aurora: ausgewählte Vorspeisen, Hauptgerichte, Desserts und Drinks – jetzt zur Abholung oder Lieferung online bestellen."
     />
+    <meta name="theme-color" content="#050812" />
 
+    <meta
+      property="og:title"
+      content="Speisekarte &amp; Online-Bestellung – Bistro Aurora"
+    />
+    <meta
+      property="og:description"
+      content="Bestelle deine Lieblingsgerichte aus dem Bistro Aurora bequem online zur Abholung oder Lieferung."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com/speisekarte.html" />
+    <meta property="og:image" content="Bilder/hero-aurora-1200.jpg" />
+
+    <link rel="preload" as="style" href="css/styles.css" />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Bilder/favicon-32.png"
+    />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
     <header class="site-header">
       <div class="container header-inner">
         <a href="index.html" class="logo">
@@ -21,40 +44,54 @@
           </span>
         </a>
 
-        <button
-          class="nav-toggle"
-          aria-label="Menü öffnen"
-          aria-expanded="false"
-        >
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Darstellung umschalten"
+          >
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
 
-        <nav class="main-nav">
+          <button
+            class="nav-toggle"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+
+        <nav class="main-nav" aria-label="Hauptnavigation">
           <ul>
             <li><a href="index.html">Start</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li>
-              <a href="speisekarte.html" class="is-active">Speisekarte</a>
+              <a href="speisekarte.html" class="is-active" aria-current="page"
+                >Speisekarte &amp; Online-Bestellung</a
+              >
             </li>
             <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="events.html">Events</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- HERO -->
       <section class="section menu-hero">
         <div class="container">
           <header class="section-header">
-            <p class="eyebrow">Unsere Auswahl</p>
-            <h1>Speisekarte</h1>
+            <p class="eyebrow">Speisekarte &amp; Online-Bestellung</p>
+            <h1>Deine Aurora-Auswahl – vor Ort oder zuhause</h1>
             <p>
-              Eine kleine, bewusst kuratierte Karte mit Gerichten, die wir
-              selbst lieben – frisch gekocht, saisonal gedacht und perfekt für
-              einen entspannten Abend.
+              Wähle deine Lieblingsgerichte, entscheide zwischen Abholung und
+              Lieferung und bezahle sicher online. Wir bereiten alles frisch zu
+              und melden uns, sobald deine Bestellung unterwegs oder abholbereit
+              ist.
             </p>
           </header>
 
@@ -66,310 +103,615 @@
         </div>
       </section>
 
-      <!-- VORSPEISEN -->
+      <!-- SHOP LAYOUT -->
       <section class="section menu-section">
-        <div class="container">
-          <div class="menu-section-header">
-            <h2>Vorspeisen</h2>
-            <p>Kleine Gerichte zum Ankommen, Teilen und Appetit machen.</p>
-          </div>
+        <div class="container menu-shop-layout">
+          <!-- LINKER BEREICH: PRODUKTE -->
+          <div class="menu-catalog">
+            <!-- VORSPEISEN -->
+            <div class="menu-section-header">
+              <h2>Vorspeisen</h2>
+              <p>Kleine Gerichte zum Ankommen, Teilen und Appetit machen.</p>
+            </div>
 
-          <div class="menu-grid">
-            <article class="menu-item">
-              <div class="menu-item-main">
-                <h3>Geröstete Kürbissuppe ★</h3>
-                <p>
-                  Cremige Suppe mit gerösteten Kürbiskernen, Chili-Öl und einem
-                  Hauch Orange. <span class="menu-tag">🌱</span>
-                </p>
-              </div>
-              <div class="menu-item-price">8,50 €</div>
-            </article>
-
-            <article class="menu-item">
-              <div class="menu-item-main">
-                <h3>Aurora-Antipasti</h3>
-                <p>
-                  Auswahl eingelegtes Gemüse, Oliven, Ofentomaten und Brot aus
-                  der Region. <span class="menu-tag">🜁</span>
-                </p>
-              </div>
-              <div class="menu-item-price">11,90 €</div>
-            </article>
-
-            <article class="menu-item">
-              <div class="menu-item-main">
-                <h3>Ziegenkäse aus dem Ofen</h3>
-                <p>
-                  Mit Honig, Thymian, Rote-Bete-Carpaccio und Rucola.
-                  <span class="menu-tag">🌱</span>
-                </p>
-              </div>
-              <div class="menu-item-price">10,50 €</div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- HAUPTGERICHTE -->
-      <section class="section menu-section">
-        <div class="container">
-          <div class="menu-section-header">
-            <h2>Hauptgerichte</h2>
-            <p>
-              Wenige, ausgewählte Gerichte – dafür mit viel Liebe zum Detail.
-            </p>
-          </div>
-
-          <div class="menu-grid">
-            <article class="menu-item menu-item-with-image">
-              <div class="menu-thumb-wrap">
-                <img
-                  src="Bilder/gericht-1.jpg"
-                  alt="Gebratenes Filet auf Safranrisotto"
-                  class="menu-thumb"
-                />
-              </div>
-              <div class="menu-item-main">
-                <h3>Gebratenes Filet auf Risotto ★</h3>
-                <p>
-                  Zartes Rinderfilet auf cremigem Safranrisotto, Rucola und
-                  Parmesan.
-                </p>
-                <a href="kontakt.html#reservierung" class="menu-link-inline"
-                  >Dazu Tisch reservieren →</a
-                >
-              </div>
-              <div class="menu-item-price">26,90 €</div>
-            </article>
-
-            <article class="menu-item menu-item-with-image">
-              <div class="menu-thumb-wrap">
-                <img
-                  src="Bilder/gericht-2.jpg"
-                  alt="Lachsfilet mit Bohnen und Ofenkartoffeln"
-                  class="menu-thumb"
-                />
-              </div>
-              <div class="menu-item-main">
-                <h3>Lachsfilet „Aurora“</h3>
-                <p>
-                  Knusprig gebratenes Lachsfilet, grüne Bohnen, Ofenkartoffeln
-                  und Kräuter-Sauce.
-                </p>
-                <a href="kontakt.html#reservierung" class="menu-link-inline"
-                  >Dazu Tisch reservieren →</a
-                >
-              </div>
-              <div class="menu-item-price">24,50 €</div>
-            </article>
-
-            <article class="menu-item">
-              <div class="menu-item-main">
-                <h3>Hausgemachte Pasta mit Pilzen</h3>
-                <p>
-                  Bandnudeln mit gebratenen Kräuterseitlingen, weißem Wein und
-                  Pecorino. <span class="menu-tag">🌱</span>
-                </p>
-                <a href="kontakt.html#reservierung" class="menu-link-inline"
-                  >Reservieren →</a
-                >
-              </div>
-              <div class="menu-item-price">17,90 €</div>
-            </article>
-
-            <article class="menu-item">
-              <div class="menu-item-main">
-                <h3>Aurora Bowl</h3>
-                <p>
-                  Ofengemüse, Linsen, mariniertes Tofu, Kräuteröl und Sesam.
-                  <span class="menu-tag">🜁</span>
-                </p>
-                <a href="kontakt.html#reservierung" class="menu-link-inline"
-                  >Reservieren →</a
-                >
-              </div>
-              <div class="menu-item-price">16,50 €</div>
-            </article>
-          </div>
-
-          <p class="menu-note">
-            Alle Hauptgerichte werden mit frischem Brot und Butter serviert.
-            Änderungen bei Unverträglichkeiten gern auf Anfrage.
-          </p>
-        </div>
-      </section>
-
-      <!-- DESSERTS -->
-      <section class="section menu-section">
-        <div class="container">
-          <div class="menu-section-header">
-            <h2>Desserts</h2>
-            <p>Zum Abschluss – oder einfach so.</p>
-          </div>
-
-          <div class="menu-grid">
-            <article class="menu-item menu-item-with-image">
-              <div class="menu-thumb-wrap">
-                <img
-                  src="Bilder/dessert-1.jpg"
-                  alt="Schokoladentarte mit Beeren"
-                  class="menu-thumb"
-                />
-              </div>
-              <div class="menu-item-main">
-                <h3>Schokoladentarte mit Beeren ★</h3>
-                <p>
-                  Dunkle Schokolade, frische Beeren, Sahne und knuspriger Boden.
-                  <span class="menu-tag">🌱</span>
-                </p>
-                <a href="galerie.html" class="menu-link-inline"
-                  >Mehr Eindrücke in der Galerie →</a
-                >
-              </div>
-              <div class="menu-item-price">9,50 €</div>
-            </article>
-
-            <article class="menu-item">
-              <div class="menu-item-main">
-                <h3>Panna Cotta mit Espresso-Karamell</h3>
-                <p>
-                  Sanfte Vanille-Panna-Cotta, Espresso-Karamellsauce und
-                  Kakao-Nibs.
-                </p>
-              </div>
-              <div class="menu-item-price">8,90 €</div>
-            </article>
-
-            <article class="menu-item">
-              <div class="menu-item-main">
-                <h3>Zitronensorbet</h3>
-                <p>
-                  Erfrischendes Sorbet mit Zitronenzeste und Minze.
-                  <span class="menu-tag">🜁</span>
-                </p>
-              </div>
-              <div class="menu-item-price">7,50 €</div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- DRINKS -->
-      <section class="section menu-section">
-        <div class="container">
-          <div class="menu-section-header">
-            <h2>Drinks &amp; Weine</h2>
-            <p>Ausgewählte Drinks für entspannte Abende im warmen Licht.</p>
-          </div>
-
-          <div class="menu-drinks-grid">
-            <div class="menu-drinks-column">
-              <h3>Aurora Cocktails</h3>
-              <figure class="menu-drinks-hero">
-                <img
-                  src="Bilder/drinks-1.jpg"
-                  alt="Cocktails an der Bar im Bistro Aurora"
-                  loading="lazy"
-                />
-                <figcaption>
-                  Unsere Drinks sind genauso sorgfältig abgestimmt wie unsere
-                  Gerichte.
-                </figcaption>
-              </figure>
-
-              <article class="menu-item">
+            <div class="menu-grid">
+              <article
+                class="menu-item menu-item-product"
+                data-id="starter-kurbissuppe"
+                data-name="Geröstete Kürbissuppe ★"
+                data-price="8.50"
+                data-category="vorspeise"
+              >
                 <div class="menu-item-main">
-                  <h4>Aurora Spritz ★</h4>
-                  <p>Hausaperitif mit Bitterorange, Kräutern und Prosecco.</p>
-                </div>
-                <div class="menu-item-price">10,50 €</div>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-item-main">
-                  <h4>Dark &amp; Slow</h4>
+                  <h3>Geröstete Kürbissuppe ★</h3>
                   <p>
-                    Rum, Limette, Ingwer und brauner Zucker – langsam gerührt.
+                    Cremige Suppe mit gerösteten Kürbiskernen, Chili-Öl und
+                    einem Hauch Orange. <span class="menu-tag">🌱</span>
                   </p>
                 </div>
-                <div class="menu-item-price">11,50 €</div>
+                <div class="menu-item-actions">
+                  <div class="menu-item-price">8,50 €</div>
+                  <button
+                    type="button"
+                    class="btn-primary btn-small add-to-cart"
+                  >
+                    In den Warenkorb
+                  </button>
+                </div>
               </article>
 
-              <article class="menu-item">
+              <article
+                class="menu-item menu-item-product"
+                data-id="starter-antipasti"
+                data-name="Aurora-Antipasti"
+                data-price="11.90"
+                data-category="vorspeise"
+              >
                 <div class="menu-item-main">
-                  <h4>Rosmarin Tonic</h4>
-                  <p>Gin, Tonic, Rosmarin und Grapefruit-Zeste.</p>
+                  <h3>Aurora-Antipasti</h3>
+                  <p>
+                    Auswahl eingelegtes Gemüse, Oliven, Ofentomaten und Brot aus
+                    der Region. <span class="menu-tag">🜁</span>
+                  </p>
                 </div>
-                <div class="menu-item-price">9,90 €</div>
+                <div class="menu-item-actions">
+                  <div class="menu-item-price">11,90 €</div>
+                  <button
+                    type="button"
+                    class="btn-primary btn-small add-to-cart"
+                  >
+                    In den Warenkorb
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="menu-item menu-item-product"
+                data-id="starter-ziegenkase"
+                data-name="Ziegenkäse aus dem Ofen"
+                data-price="10.50"
+                data-category="vorspeise"
+              >
+                <div class="menu-item-main">
+                  <h3>Ziegenkäse aus dem Ofen</h3>
+                  <p>
+                    Mit Honig, Thymian, Rote-Bete-Carpaccio und Rucola.
+                    <span class="menu-tag">🌱</span>
+                  </p>
+                </div>
+                <div class="menu-item-actions">
+                  <div class="menu-item-price">10,50 €</div>
+                  <button
+                    type="button"
+                    class="btn-primary btn-small add-to-cart"
+                  >
+                    In den Warenkorb
+                  </button>
+                </div>
               </article>
             </div>
 
-            <div class="menu-drinks-column">
-              <h3>Weine &amp; Alkoholfreies</h3>
+            <!-- HAUPTGERICHTE -->
+            <div class="menu-section-header">
+              <h2>Hauptgerichte</h2>
+              <p>
+                Wenige, ausgewählte Gerichte – dafür mit viel Liebe zum Detail.
+              </p>
+            </div>
 
-              <article class="menu-item">
+            <div class="menu-grid">
+              <article
+                class="menu-item menu-item-with-image menu-item-product"
+                data-id="main-filet-risotto"
+                data-name="Gebratenes Filet auf Risotto ★"
+                data-price="26.90"
+                data-category="hauptgericht"
+              >
+                <div class="menu-thumb-wrap">
+                  <img
+                    src="Bilder/gericht-1.jpg"
+                    alt="Gebratenes Filet auf Safranrisotto"
+                    class="menu-thumb"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <div class="menu-item-main">
-                  <h4>Weißwein (Glas)</h4>
+                  <h3>Gebratenes Filet auf Risotto ★</h3>
                   <p>
-                    Wechselnde, ausgewählte Positionen – frag uns gern nach
-                    Empfehlungen.
+                    Zartes Rinderfilet auf cremigem Safranrisotto, Rucola und
+                    Parmesan.
                   </p>
                 </div>
-                <div class="menu-item-price">ab 7,50 €</div>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-item-main">
-                  <h4>Rotwein (Glas)</h4>
-                  <p>Kräftig, aber weich – ideal für unsere Hauptgerichte.</p>
+                <div class="menu-item-actions">
+                  <div class="menu-item-price">26,90 €</div>
+                  <button
+                    type="button"
+                    class="btn-primary btn-small add-to-cart"
+                  >
+                    In den Warenkorb
+                  </button>
                 </div>
-                <div class="menu-item-price">ab 7,90 €</div>
               </article>
 
-              <article class="menu-item">
+              <article
+                class="menu-item menu-item-with-image menu-item-product"
+                data-id="main-lachs-aurora"
+                data-name="Lachsfilet „Aurora“"
+                data-price="24.50"
+                data-category="hauptgericht"
+              >
+                <div class="menu-thumb-wrap">
+                  <img
+                    src="Bilder/gericht-2.jpg"
+                    alt="Lachsfilet mit Bohnen und Ofenkartoffeln"
+                    class="menu-thumb"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
                 <div class="menu-item-main">
-                  <h4>Hausgemachte Limonade</h4>
+                  <h3>Lachsfilet „Aurora“</h3>
                   <p>
-                    Zitrone-Ingwer oder Beere-Minze – ohne Zusatzstoffe.
+                    Knusprig gebratenes Lachsfilet, grüne Bohnen, Ofenkartoffeln
+                    und Kräuter-Sauce.
+                  </p>
+                </div>
+                <div class="menu-item-actions">
+                  <div class="menu-item-price">24,50 €</div>
+                  <button
+                    type="button"
+                    class="btn-primary btn-small add-to-cart"
+                  >
+                    In den Warenkorb
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="menu-item menu-item-product"
+                data-id="main-pasta-pilze"
+                data-name="Hausgemachte Pasta mit Pilzen"
+                data-price="17.90"
+                data-category="hauptgericht"
+              >
+                <div class="menu-item-main">
+                  <h3>Hausgemachte Pasta mit Pilzen</h3>
+                  <p>
+                    Bandnudeln mit gebratenen Kräuterseitlingen, weißem Wein und
+                    Pecorino. <span class="menu-tag">🌱</span>
+                  </p>
+                </div>
+                <div class="menu-item-actions">
+                  <div class="menu-item-price">17,90 €</div>
+                  <button
+                    type="button"
+                    class="btn-primary btn-small add-to-cart"
+                  >
+                    In den Warenkorb
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="menu-item menu-item-product"
+                data-id="main-aurora-bowl"
+                data-name="Aurora Bowl"
+                data-price="16.50"
+                data-category="hauptgericht"
+              >
+                <div class="menu-item-main">
+                  <h3>Aurora Bowl</h3>
+                  <p>
+                    Ofengemüse, Linsen, mariniertes Tofu, Kräuteröl und Sesam.
                     <span class="menu-tag">🜁</span>
                   </p>
                 </div>
-                <div class="menu-item-price">5,20 €</div>
-              </article>
-
-              <article class="menu-item">
-                <div class="menu-item-main">
-                  <h4>Kaffee &amp; Espresso</h4>
-                  <p>Direkt gehandelte Bohnen, schonend geröstet.</p>
+                <div class="menu-item-actions">
+                  <div class="menu-item-price">16,50 €</div>
+                  <button
+                    type="button"
+                    class="btn-primary btn-small add-to-cart"
+                  >
+                    In den Warenkorb
+                  </button>
                 </div>
-                <div class="menu-item-price">ab 2,80 €</div>
               </article>
             </div>
-          </div>
 
-          <p class="menu-note menu-note-small">
-            Die Karte kann saisonal wechseln. Alle Preise in Euro, inkl. MwSt.
-          </p>
-        </div>
-      </section>
+            <!-- DESSERTS -->
+            <div class="menu-section-header">
+              <h2>Desserts</h2>
+              <p>Zum Abschluss – oder einfach so.</p>
+            </div>
 
-      <!-- CTA -->
-      <section class="section section-cta">
-        <div class="container cta-box">
-          <div class="cta-text">
-            <h2>Dein nächster Abend im Aurora</h2>
-            <p>
-              Reserviere dir einen Tisch und probiere unsere aktuellen Gerichte
-              und Drinks.
+            <div class="menu-grid">
+              <article
+                class="menu-item menu-item-with-image menu-item-product"
+                data-id="dessert-tarte"
+                data-name="Schokoladentarte mit Beeren ★"
+                data-price="9.50"
+                data-category="dessert"
+              >
+                <div class="menu-thumb-wrap">
+                  <img
+                    src="Bilder/dessert-1.jpg"
+                    alt="Schokoladentarte mit Beeren"
+                    class="menu-thumb"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+                <div class="menu-item-main">
+                  <h3>Schokoladentarte mit Beeren ★</h3>
+                  <p>
+                    Dunkle Schokolade, frische Beeren, Sahne und knuspriger
+                    Boden. <span class="menu-tag">🌱</span>
+                  </p>
+                </div>
+                <div class="menu-item-actions">
+                  <div class="menu-item-price">9,50 €</div>
+                  <button
+                    type="button"
+                    class="btn-primary btn-small add-to-cart"
+                  >
+                    In den Warenkorb
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="menu-item menu-item-product"
+                data-id="dessert-pannacotta"
+                data-name="Panna Cotta mit Espresso-Karamell"
+                data-price="8.90"
+                data-category="dessert"
+              >
+                <div class="menu-item-main">
+                  <h3>Panna Cotta mit Espresso-Karamell</h3>
+                  <p>
+                    Sanfte Vanille-Panna-Cotta, Espresso-Karamellsauce und
+                    Kakao-Nibs.
+                  </p>
+                </div>
+                <div class="menu-item-actions">
+                  <div class="menu-item-price">8,90 €</div>
+                  <button
+                    type="button"
+                    class="btn-primary btn-small add-to-cart"
+                  >
+                    In den Warenkorb
+                  </button>
+                </div>
+              </article>
+
+              <article
+                class="menu-item menu-item-product"
+                data-id="dessert-zitronensorbet"
+                data-name="Zitronensorbet"
+                data-price="7.50"
+                data-category="dessert"
+              >
+                <div class="menu-item-main">
+                  <h3>Zitronensorbet</h3>
+                  <p>
+                    Erfrischendes Sorbet mit Zitronenzeste und Minze.
+                    <span class="menu-tag">🜁</span>
+                  </p>
+                </div>
+                <div class="menu-item-actions">
+                  <div class="menu-item-price">7,50 €</div>
+                  <button
+                    type="button"
+                    class="btn-primary btn-small add-to-cart"
+                  >
+                    In den Warenkorb
+                  </button>
+                </div>
+              </article>
+            </div>
+
+            <!-- DRINKS -->
+            <div class="menu-section-header">
+              <h2>Drinks &amp; Weine</h2>
+              <p>Ausgewählte Drinks für entspannte Abende im warmen Licht.</p>
+            </div>
+
+            <div class="menu-drinks-grid">
+              <div class="menu-drinks-column">
+                <h3>Aurora Cocktails</h3>
+                <figure class="menu-drinks-hero">
+                  <img
+                    src="Bilder/drinks-1.jpg"
+                    alt="Cocktails an der Bar im Bistro Aurora"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <figcaption>
+                    Unsere Drinks sind genauso sorgfältig abgestimmt wie unsere
+                    Gerichte.
+                  </figcaption>
+                </figure>
+
+                <article
+                  class="menu-item menu-item-product"
+                  data-id="drink-aurora-spritz"
+                  data-name="Aurora Spritz ★"
+                  data-price="10.50"
+                  data-category="drink"
+                >
+                  <div class="menu-item-main">
+                    <h4>Aurora Spritz ★</h4>
+                    <p>Hausaperitif mit Bitterorange, Kräutern und Prosecco.</p>
+                  </div>
+                  <div class="menu-item-actions">
+                    <div class="menu-item-price">10,50 €</div>
+                    <button
+                      type="button"
+                      class="btn-primary btn-small add-to-cart"
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </article>
+
+                <article
+                  class="menu-item menu-item-product"
+                  data-id="drink-dark-slow"
+                  data-name="Dark &amp; Slow"
+                  data-price="11.50"
+                  data-category="drink"
+                >
+                  <div class="menu-item-main">
+                    <h4>Dark &amp; Slow</h4>
+                    <p>
+                      Rum, Limette, Ingwer und brauner Zucker – langsam gerührt.
+                    </p>
+                  </div>
+                  <div class="menu-item-actions">
+                    <div class="menu-item-price">11,50 €</div>
+                    <button
+                      type="button"
+                      class="btn-primary btn-small add-to-cart"
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </article>
+
+                <article
+                  class="menu-item menu-item-product"
+                  data-id="drink-rosmarin-tonic"
+                  data-name="Rosmarin Tonic"
+                  data-price="9.90"
+                  data-category="drink"
+                >
+                  <div class="menu-item-main">
+                    <h4>Rosmarin Tonic</h4>
+                    <p>Gin, Tonic, Rosmarin und Grapefruit-Zeste.</p>
+                  </div>
+                  <div class="menu-item-actions">
+                    <div class="menu-item-price">9,90 €</div>
+                    <button
+                      type="button"
+                      class="btn-primary btn-small add-to-cart"
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <div class="menu-drinks-column">
+                <h3>Weine &amp; Alkoholfreies</h3>
+
+                <article
+                  class="menu-item menu-item-product"
+                  data-id="drink-weisswein"
+                  data-name="Weißwein (Glas)"
+                  data-price="7.50"
+                  data-category="drink"
+                >
+                  <div class="menu-item-main">
+                    <h4>Weißwein (Glas)</h4>
+                    <p>
+                      Wechselnde, ausgewählte Positionen – frag uns gern nach
+                      Empfehlungen.
+                    </p>
+                  </div>
+                  <div class="menu-item-actions">
+                    <div class="menu-item-price">ab 7,50 €</div>
+                    <button
+                      type="button"
+                      class="btn-primary btn-small add-to-cart"
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </article>
+
+                <article
+                  class="menu-item menu-item-product"
+                  data-id="drink-rotwein"
+                  data-name="Rotwein (Glas)"
+                  data-price="7.90"
+                  data-category="drink"
+                >
+                  <div class="menu-item-main">
+                    <h4>Rotwein (Glas)</h4>
+                    <p>Kräftig, aber weich – ideal für unsere Hauptgerichte.</p>
+                  </div>
+                  <div class="menu-item-actions">
+                    <div class="menu-item-price">ab 7,90 €</div>
+                    <button
+                      type="button"
+                      class="btn-primary btn-small add-to-cart"
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </article>
+
+                <article
+                  class="menu-item menu-item-product"
+                  data-id="drink-limonade"
+                  data-name="Hausgemachte Limonade"
+                  data-price="5.20"
+                  data-category="drink"
+                >
+                  <div class="menu-item-main">
+                    <h4>Hausgemachte Limonade</h4>
+                    <p>
+                      Zitrone-Ingwer oder Beere-Minze – ohne Zusatzstoffe.
+                      <span class="menu-tag">🜁</span>
+                    </p>
+                  </div>
+                  <div class="menu-item-actions">
+                    <div class="menu-item-price">5,20 €</div>
+                    <button
+                      type="button"
+                      class="btn-primary btn-small add-to-cart"
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </article>
+
+                <article
+                  class="menu-item menu-item-product"
+                  data-id="drink-kaffee"
+                  data-name="Kaffee &amp; Espresso"
+                  data-price="2.80"
+                  data-category="drink"
+                >
+                  <div class="menu-item-main">
+                    <h4>Kaffee &amp; Espresso</h4>
+                    <p>Direkt gehandelte Bohnen, schonend geröstet.</p>
+                  </div>
+                  <div class="menu-item-actions">
+                    <div class="menu-item-price">ab 2,80 €</div>
+                    <button
+                      type="button"
+                      class="btn-primary btn-small add-to-cart"
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <p class="menu-note">
+              Alle Hauptgerichte werden mit frischem Brot serviert. Änderungen
+              bei Unverträglichkeiten gern auf Anfrage (bitte im Kommentarfeld
+              vermerken).
             </p>
           </div>
-          <div class="cta-actions">
-            <a href="reservierung.html" class="btn-primary"
-              >Reservierung anfragen</a
-            >
-            <a href="#top" class="btn-ghost">Nach oben</a>
-          </div>
+
+          <!-- RECHTER BEREICH: WARENKORB / CHECKOUT -->
+          <aside class="menu-cart" aria-label="Warenkorb">
+            <h2>Dein Warenkorb</h2>
+            <p class="menu-cart-subtitle">
+              Wähle Abholung oder Lieferung, überprüfe deine Bestellung und
+              schließe den Kauf sicher über PayPal ab.
+            </p>
+
+            <div class="menu-cart-mode">
+              <label>
+                <input type="radio" name="orderMode" value="pickup" checked />
+                <span>Abholung</span>
+              </label>
+              <label>
+                <input type="radio" name="orderMode" value="delivery" />
+                <span>Lieferung</span>
+              </label>
+            </div>
+
+            <div class="menu-cart-delivery-fields" data-delivery-fields hidden>
+              <label class="form-inline-label">
+                <span>Adresse für Lieferung</span>
+                <input
+                  type="text"
+                  name="deliveryAddress"
+                  placeholder="Straße, Hausnummer, PLZ, Ort"
+                  autocomplete="street-address"
+                />
+              </label>
+              <label class="form-inline-label">
+                <span>Telefonnummer</span>
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="z. B. 0171 2345678"
+                  autocomplete="tel"
+                />
+              </label>
+            </div>
+
+            <div class="menu-cart-customer">
+              <label class="form-inline-label">
+                <span>Dein Name</span>
+                <input
+                  type="text"
+                  name="customerName"
+                  placeholder="Wie dürfen wir dich ansprechen?"
+                  autocomplete="name"
+                />
+              </label>
+              <label class="form-inline-label">
+                <span>E-Mail-Adresse</span>
+                <input
+                  type="email"
+                  name="customerEmail"
+                  placeholder="Für Bestellbestätigung"
+                  autocomplete="email"
+                />
+              </label>
+              <label class="form-inline-label">
+                <span>Kommentar zur Bestellung (optional)</span>
+                <textarea
+                  name="customerNote"
+                  rows="3"
+                  placeholder="z. B. Allergien, Klingelhinweis, gewünschte Zeit"
+                ></textarea>
+              </label>
+            </div>
+
+            <div class="menu-cart-items" data-cart-items>
+              <p class="menu-cart-empty">Dein Warenkorb ist noch leer.</p>
+            </div>
+
+            <dl class="menu-cart-summary">
+              <div>
+                <dt>Zwischensumme</dt>
+                <dd data-cart-subtotal>0,00 €</dd>
+              </div>
+              <div>
+                <dt>Liefergebühr</dt>
+                <dd data-cart-delivery-fee>0,00 €</dd>
+              </div>
+              <div class="menu-cart-summary-total">
+                <dt>Gesamt</dt>
+                <dd data-cart-total>0,00 €</dd>
+              </div>
+            </dl>
+
+            <p class="menu-cart-note">
+              Lieferung aktuell innerhalb ausgewählter Gebiete in Dortmund.
+              Mindestbestellwert für Lieferung: 25,00 €.
+            </p>
+
+            <div class="menu-cart-paypal">
+              <div id="paypal-button-container"></div>
+            </div>
+
+            <p class="menu-cart-small">
+              Zahlung über PayPal (inkl. Lastschrift &amp; Kreditkarte). Deine
+              Daten werden sicher über PayPal verarbeitet.
+            </p>
+
+            <p class="menu-cart-error" data-cart-error hidden></p>
+          </aside>
         </div>
       </section>
     </main>
@@ -385,8 +727,12 @@
           <ul class="footer-links">
             <li><a href="index.html">Start</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li>
+              <a href="speisekarte.html">Speisekarte &amp; Online-Bestellung</a>
+            </li>
             <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="reservierung.html">Reservierung</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="datenschutz.html">Datenschutz</a></li>
@@ -405,6 +751,11 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <button class="back-to-top" type="button" aria-label="Nach oben">↑</button>
+
+    <!-- PayPal JS SDK: client-id & currency anpassen -->
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_PAYPAL_CLIENT_ID&currency=EUR"></script>
+    <script src="js/core.js" defer></script>
+    <script src="js/shop.js" defer></script>
   </body>
 </html>

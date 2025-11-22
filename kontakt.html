@@ -6,193 +6,114 @@
     <title>Kontakt – Bistro Aurora</title>
     <meta
       name="description"
-      content="Kontakt zum Bistro Aurora: Reservierungen, Anfragen und Öffnungszeiten."
+      content="Kontaktiere das Bistro Aurora für Reservierungen, Anfragen und Feedback."
     />
-
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
+    <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
     <header class="site-header">
       <div class="container header-inner">
         <a href="index.html" class="logo">
           <span class="logo-mark">BA</span>
-          <span class="logo-text">
-            Bistro <span class="logo-highlight">Aurora</span>
-          </span>
+          <span class="logo-text"
+            >Bistro <span class="logo-highlight">Aurora</span></span
+          >
         </a>
 
-        <button
-          class="nav-toggle"
-          aria-label="Menü öffnen"
-          aria-expanded="false"
-        >
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
+        <div class="header-actions">
+          <button class="theme-toggle">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+          <button
+            class="nav-toggle"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
 
         <nav class="main-nav">
           <ul>
             <li><a href="index.html">Start</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li>
+              <a href="speisekarte.html">Speisekarte &amp; Online-Bestellung</a>
+            </li>
             <li><a href="galerie.html">Galerie</a></li>
-            <li><a href="kontakt.html" class="is-active">Kontakt</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li>
+              <a class="is-active" href="kontakt.html" aria-current="page"
+                >Kontakt</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <!-- HERO -->
-      <section class="section kontakt-hero">
-        <div class="container section-header">
-          <p class="eyebrow">Kontakt & Reservierung</p>
-          <h1>Wir freuen uns auf deine Nachricht</h1>
+    <main id="main-content">
+      <section class="section contact-hero">
+        <div class="container">
+          <p class="eyebrow">Kontakt</p>
+          <h1>Schreib uns jederzeit</h1>
           <p>
-            Egal ob Reservierung, Anfrage oder Feedback – wir antworten so
-            schnell wie möglich.
+            Für Reservierungen, Bestellungen oder Fragen – wir sind gern da.
           </p>
         </div>
       </section>
 
-      <!-- FORM + INFO -->
-      <section class="section kontakt-grid" id="reservierung">
-        <div class="container kontakt-layout">
-          <!-- FORMULAR -->
-          <div class="kontakt-form">
-            <h2>Nachricht senden</h2>
-
-            <form
-              action="https://formspree.io/f/mnqekvqa"
-              method="POST"
-              class="form"
-            >
-              <label>
-                <span>Name</span>
-                <input type="text" name="name" required />
-              </label>
-
-              <label>
-                <span>E-Mail</span>
-                <input type="email" name="email" required />
-              </label>
-
-              <label>
-                <span>Telefon (optional)</span>
-                <input type="text" name="telefon" />
-              </label>
-
-              <label>
-                <span>Nachricht</span>
-                <textarea name="nachricht" rows="5" required></textarea>
-              </label>
-
-              <button type="submit" class="btn-primary">
-                Nachricht senden
-              </button>
-            </form>
-          </div>
-
+      <section class="section contact-section">
+        <div class="container contact-grid">
           <!-- INFO -->
-          <div class="kontakt-info">
-            <h2>Adresse</h2>
+          <div class="contact-info">
+            <h2>Kontaktmöglichkeiten</h2>
             <p>
-              Bistro Aurora<br />
+              <strong>Adresse:</strong><br />
               Aurora-Platz 7<br />
               44135 Dortmund
             </p>
-
-            <h2>Öffnungszeiten</h2>
             <p>
-              Mo–Fr: 11:30 – 22:00 Uhr<br />
-              Sa: 10:00 – 23:00 Uhr<br />
-              So: Ruhetag
+              <strong>Telefon:</strong><br />
+              0231 / 123 456 78
             </p>
-
-            <h2>Telefon</h2>
-            <p>0231 / 123 456 78</p>
-
-            <h2>E-Mail</h2>
-            <p>kontakt@bistro-aurora.de</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- MAP (DSGVO-freundlich) -->
-      <section class="section kontakt-map">
-        <div class="container">
-          <h2 class="map-heading">Hier findest du uns</h2>
-
-          <a
-            href="https://www.google.com/maps/place/Aurora-Platz+7,+44135+Dortmund"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="map-frame map-click"
-          >
-            <img
-              src="Bilder/map-aurora.jpg"
-              alt="Statische Karte – klick zum Öffnen in Google Maps"
-            />
-            <div class="map-overlay">
-              <span>Google Maps öffnen</span>
-            </div>
-          </a>
-
-          <p class="map-note">
-            Statische Karte · Beim Klicken wird Google Maps geöffnet (externer
-            Dienst)
-          </p>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="section section-cta">
-        <div class="container cta-box">
-          <div class="cta-text">
-            <h2>Einen Tisch reservieren?</h2>
             <p>
-              Schick uns Datum, Uhrzeit und Personenzahl – wir melden uns
-              schnell zurück.
+              <strong>E-Mail:</strong><br />
+              kontakt@bistro-aurora.de
             </p>
           </div>
-          <div class="cta-actions">
-            <a href="#top" class="btn-ghost">Nach oben</a>
-          </div>
+
+          <!-- FORMULAR -->
+          <form class="contact-form" action="#" method="post">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>E-Mail</span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span>Nachricht</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+
+            <button type="submit" class="btn-primary">Nachricht senden</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <h3>Bistro Aurora</h3>
-          <p>Aurora-Platz 7 · 44135 Dortmund<br />Tel.: 0231 / 123 456 78</p>
-        </div>
-        <div>
-          <h3>Navigation</h3>
-          <ul class="footer-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="speisekarte.html">Speisekarte</a></li>
-            <li><a href="galerie.html">Galerie</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
-            <li><a href="datenschutz.html">Datenschutz</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3>Öffnungszeiten</h3>
-          <p>
-            Mo–Fr: 11:30 – 22:00 Uhr<br />Sa: 10:00 – 23:00 Uhr · So: Ruhetag
-          </p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© Bistro Aurora · Fiktives Projekt für Portfolio-Zwecke</p>
+      <div class="container footer-bottom">
+        <p>© Bistro Aurora · Fiktives Projekt</p>
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/core.js" defer></script>
   </body>
 </html>

@@ -6,12 +6,30 @@
     <title>Galerie – Bistro Aurora</title>
     <meta
       name="description"
-      content="Einblicke in das Bistro Aurora: Innenraum, Gerichte und Momente mit unseren Gästen."
+      content="Einblicke in das Bistro Aurora: Innenraum, Gerichte, Desserts und Abende im warmen Licht."
     />
+    <meta name="theme-color" content="#050812" />
+
+    <meta property="og:title" content="Galerie – Bistro Aurora" />
+    <meta
+      property="og:description"
+      content="Bilder aus dem Bistro Aurora: Atmosphäre, Gerichte und besondere Abende."
+    />
+    <meta property="og:url" content="https://example.com/galerie.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="Bilder/hero-aurora-1200.jpg" />
 
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="Bilder/favicon-32.png"
+    />
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
     <header class="site-header">
       <div class="container header-inner">
         <a href="index.html" class="logo">
@@ -21,28 +39,45 @@
           </span>
         </a>
 
-        <button
-          class="nav-toggle"
-          aria-label="Menü öffnen"
-          aria-expanded="false"
-        >
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Darstellung umschalten"
+          >
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
 
-        <nav class="main-nav">
+          <button
+            class="nav-toggle"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+
+        <nav class="main-nav" aria-label="Hauptnavigation">
           <ul>
             <li><a href="index.html">Start</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="speisekarte.html">Speisekarte</a></li>
-            <li><a href="galerie.html" class="is-active">Galerie</a></li>
+            <li>
+              <a href="speisekarte.html">Speisekarte &amp; Online-Bestellung</a>
+            </li>
+            <li>
+              <a href="galerie.html" class="is-active" aria-current="page"
+                >Galerie</a
+              >
+            </li>
+            <li><a href="events.html">Events</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main class="gallery-page">
+    <main class="gallery-page" id="main-content">
       <div class="container">
         <header class="gallery-header">
           <p class="eyebrow">Einblicke</p>
@@ -53,129 +88,191 @@
           </p>
         </header>
 
-        <section class="gallery-grid">
+        <!-- Filter -->
+        <div
+          class="gallery-filters"
+          aria-label="Galerie filtern"
+          role="tablist"
+        >
+          <button
+            type="button"
+            class="gallery-filter-btn is-active"
+            data-filter="all"
+            role="tab"
+            aria-selected="true"
+          >
+            Alle
+          </button>
+          <button
+            type="button"
+            class="gallery-filter-btn"
+            data-filter="innenraum"
+            role="tab"
+            aria-selected="false"
+          >
+            Innenraum
+          </button>
+          <button
+            type="button"
+            class="gallery-filter-btn"
+            data-filter="gerichte"
+            role="tab"
+            aria-selected="false"
+          >
+            Gerichte &amp; Desserts
+          </button>
+          <button
+            type="button"
+            class="gallery-filter-btn"
+            data-filter="drinks"
+            role="tab"
+            aria-selected="false"
+          >
+            Drinks
+          </button>
+          <button
+            type="button"
+            class="gallery-filter-btn"
+            data-filter="gäste"
+            role="tab"
+            aria-selected="false"
+          >
+            Gäste &amp; Abende
+          </button>
+        </div>
+
+        <!-- Masonry-Grid -->
+        <section
+          class="gallery-grid"
+          data-gallery-grid
+          aria-label="Bildergalerie"
+        >
           <!-- Item 1 -->
-          <a href="#bild1" class="gallery-item">
+          <button
+            type="button"
+            class="gallery-item"
+            data-category="innenraum"
+            data-full="Bilder/gallery-1.jpg"
+            data-caption="Innenraum des Bistro Aurora im warmen Abendlicht."
+          >
             <img
               src="Bilder/gallery-1.jpg"
-              alt="Innenraum des Bistro Aurora im warmen Licht" loading="lazy"
+              alt="Innenraum des Bistro Aurora im warmen Licht"
+              loading="lazy"
+              decoding="async"
             />
-            <span>Innenraum</span>
-          </a>
+            <span class="gallery-chip">Innenraum</span>
+          </button>
 
           <!-- Item 2 -->
-          <a href="#bild2" class="gallery-item">
+          <button
+            type="button"
+            class="gallery-item"
+            data-category="innenraum"
+            data-full="Bilder/gallery-2.jpg"
+            data-caption="Gedeckter Tisch mit Wein, Kerzenschein und Details."
+          >
             <img
               src="Bilder/gallery-2.jpg"
-              alt="Gedeckter Tisch mit Wein und Kerzen" loading="lazy"
+              alt="Gedeckter Tisch mit Wein und Kerzen"
+              loading="lazy"
+              decoding="async"
             />
-            <span>Gedeckte Tische</span>
-          </a>
+            <span class="gallery-chip">Tische</span>
+          </button>
 
           <!-- Item 3 -->
-          <a href="#bild3" class="gallery-item">
+          <button
+            type="button"
+            class="gallery-item"
+            data-category="gerichte"
+            data-full="Bilder/gallery-3.jpg"
+            data-caption="Hausgemachtes Hauptgericht – saisonal und frisch."
+          >
             <img
               src="Bilder/gallery-3.jpg"
-              alt="Hausgemachtes Hauptgericht im Bistro Aurora" loading="lazy"
+              alt="Hausgemachtes Hauptgericht im Bistro Aurora"
+              loading="lazy"
+              decoding="async"
             />
-            <span>Hauptgericht</span>
-          </a>
+            <span class="gallery-chip">Hauptgericht</span>
+          </button>
 
           <!-- Item 4 -->
-          <a href="#bild4" class="gallery-item">
-            <img src="Bilder/gallery-4.jpg" alt="Dessert im Bistro Aurora" loading="lazy" />
-            <span>Dessert</span>
-          </a>
+          <button
+            type="button"
+            class="gallery-item"
+            data-category="gerichte"
+            data-full="Bilder/gallery-4.jpg"
+            data-caption="Desserts mit Liebe angerichtet."
+          >
+            <img
+              src="Bilder/gallery-4.jpg"
+              alt="Dessert im Bistro Aurora"
+              loading="lazy"
+              decoding="async"
+            />
+            <span class="gallery-chip">Dessert</span>
+          </button>
 
           <!-- Item 5 -->
-          <a href="#bild5" class="gallery-item">
+          <button
+            type="button"
+            class="gallery-item"
+            data-category="drinks"
+            data-full="Bilder/gallery-5.jpg"
+            data-caption="Ausgewählte Drinks und Klassiker an der Bar."
+          >
             <img
               src="Bilder/gallery-5.jpg"
-              alt="Auswahl an Drinks an der Bar" loading="lazy"
+              alt="Auswahl an Drinks an der Bar"
+              loading="lazy"
+              decoding="async"
             />
-            <span>Drinks</span>
-          </a>
+            <span class="gallery-chip">Drinks</span>
+          </button>
 
           <!-- Item 6 -->
-          <a href="#bild6" class="gallery-item">
+          <button
+            type="button"
+            class="gallery-item"
+            data-category="gäste"
+            data-full="Bilder/gallery-6.jpg"
+            data-caption="Gäste genießen einen entspannten Abend im Bistro."
+          >
             <img
               src="Bilder/gallery-6.jpg"
-              alt="Gäste genießen den Abend im Bistro Aurora" loading="lazy"
+              alt="Gäste genießen den Abend im Bistro Aurora"
+              loading="lazy"
+              decoding="async"
             />
-            <span>Abende im Bistro</span>
-          </a>
+            <span class="gallery-chip">Abende</span>
+          </button>
         </section>
       </div>
     </main>
 
-    <!-- Lightboxen -->
-    <div id="bild1" class="lightbox">
-      <div class="lightbox-inner">
-        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
-        <img
-          src="Bilder/gallery-1.jpg"
-          alt="Innenraum des Bistro Aurora im warmen Licht" loading="lazy"
-        />
-        <div class="lightbox-caption">
-          Innenraum des Bistro Aurora im warmen Abendlicht.
-        </div>
-      </div>
-    </div>
-
-    <div id="bild2" class="lightbox">
-      <div class="lightbox-inner">
-        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
-        <img
-          src="Bilder/gallery-2.jpg"
-          alt="Gedeckter Tisch mit Wein und Kerzen" loading="lazy"
-        />
-        <div class="lightbox-caption">
-          Gedeckter Tisch mit Wein, Kerzenschein und Details.
-        </div>
-      </div>
-    </div>
-
-    <div id="bild3" class="lightbox">
-      <div class="lightbox-inner">
-        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
-        <img
-          src="Bilder/gallery-3.jpg"
-          alt="Hausgemachtes Hauptgericht im Bistro Aurora" loading="lazy"
-        />
-        <div class="lightbox-caption">
-          Hausgemachtes Hauptgericht – saisonal und frisch.
-        </div>
-      </div>
-    </div>
-
-    <div id="bild4" class="lightbox">
-      <div class="lightbox-inner">
-        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
-        <img src="Bilder/gallery-4.jpg" alt="Dessert im Bistro Aurora" />
-        <div class="lightbox-caption">Desserts mit Liebe angerichtet.</div>
-      </div>
-    </div>
-
-    <div id="bild5" class="lightbox">
-      <div class="lightbox-inner">
-        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
-        <img src="Bilder/gallery-5.jpg" alt="Auswahl an Drinks an der Bar" />
-        <div class="lightbox-caption">
-          Ausgewählte Drinks und Klassiker an der Bar.
-        </div>
-      </div>
-    </div>
-
-    <div id="bild6" class="lightbox">
-      <div class="lightbox-inner">
-        <a href="#" class="lightbox-close" aria-label="Schließen">×</a>
-        <img
-          src="Bilder/gallery-6.jpg"
-          alt="Gäste genießen den Abend im Bistro Aurora"
-        />
-        <div class="lightbox-caption">
-          Gäste genießen einen entspannten Abend im Bistro.
-        </div>
+    <!-- Zentrale Lightbox -->
+    <div
+      class="gallery-lightbox"
+      data-gallery-lightbox
+      aria-modal="true"
+      role="dialog"
+      aria-label="Großansicht Bild"
+      hidden
+    >
+      <div class="gallery-lightbox-backdrop" data-lightbox-close></div>
+      <div class="gallery-lightbox-inner">
+        <button
+          type="button"
+          class="gallery-lightbox-close"
+          aria-label="Schließen"
+          data-lightbox-close
+        >
+          ×
+        </button>
+        <img src="" alt="" class="gallery-lightbox-image" />
+        <div class="gallery-lightbox-caption"></div>
       </div>
     </div>
 
@@ -190,8 +287,12 @@
           <ul class="footer-links">
             <li><a href="index.html">Start</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li>
+              <a href="speisekarte.html">Speisekarte &amp; Online-Bestellung</a>
+            </li>
             <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="reservierung.html">Reservierung</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="datenschutz.html">Datenschutz</a></li>
@@ -210,6 +311,9 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <button class="back-to-top" type="button" aria-label="Nach oben">↑</button>
+
+    <script src="js/core.js" defer></script>
+    <script src="js/gallery.js" defer></script>
   </body>
 </html>

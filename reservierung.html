@@ -6,239 +6,102 @@
     <title>Reservierung – Bistro Aurora</title>
     <meta
       name="description"
-      content="Tisch im Bistro Aurora reservieren: Datum, Uhrzeit und Personenzahl anfragen."
+      content="Reserviere einen Tisch im Bistro Aurora."
     />
-
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
+    <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
     <header class="site-header">
       <div class="container header-inner">
         <a href="index.html" class="logo">
           <span class="logo-mark">BA</span>
-          <span class="logo-text">
-            Bistro <span class="logo-highlight">Aurora</span>
-          </span>
+          <span class="logo-text"
+            >Bistro <span class="logo-highlight">Aurora</span></span
+          >
         </a>
 
-        <button
-          class="nav-toggle"
-          aria-label="Menü öffnen"
-          aria-expanded="false"
-        >
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
+        <div class="header-actions">
+          <button class="theme-toggle">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+          <button class="nav-toggle">
+            <span class="nav-toggle-bar"></span
+            ><span class="nav-toggle-bar"></span>
+          </button>
+        </div>
 
         <nav class="main-nav">
           <ul>
             <li><a href="index.html">Start</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="speisekarte.html">Speisekarte</a></li>
-            <li><a href="galerie.html">Galerie</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
             <li>
-              <a href="reservierung.html" class="is-active">Reservierung</a>
+              <a href="speisekarte.html">Speisekarte &amp; Online-Bestellung</a>
+            </li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li>
+              <a class="is-active" href="reservierung.html" aria-current="page"
+                >Reservierung</a
+              >
             </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
-      <!-- HERO -->
-      <section class="section reserv-hero" id="reservierung">
-        <div class="container reserv-hero-inner">
-          <div class="reserv-hero-text">
-            <p class="eyebrow">Tisch anfragen</p>
-            <h1>Dein Abend im Bistro Aurora</h1>
-            <p>
-              Sag uns kurz, wann du kommen möchtest und mit wie vielen Personen
-              – wir melden uns mit einer Bestätigung oder
-              Alternativ-Vorschlägen.
-            </p>
-
-            <ul class="reserv-highlights">
-              <li>✔ ideale Größe für 2–6 Personen</li>
-              <li>✔ perfekt für Date Night & kleine Feiern</li>
-              <li>✔ Aurora Nights einmal im Monat</li>
-            </ul>
-          </div>
-
-          <aside class="reserv-info">
-            <h2>Öffnungszeiten</h2>
-            <p>
-              Mo–Fr: 11:30 – 22:00 Uhr<br />
-              Sa: 10:00 – 23:00 Uhr<br />
-              So: Ruhetag
-            </p>
-
-            <h2>Adresse</h2>
-            <p>
-              Bistro Aurora<br />
-              Aurora-Platz 7<br />
-              44135 Dortmund
-            </p>
-
-            <h2>Telefonische Anfragen</h2>
-            <p>0231 / 123 456 78</p>
-          </aside>
+    <main id="main-content">
+      <section class="section reservation-hero">
+        <div class="container">
+          <p class="eyebrow">Reservierung</p>
+          <h1>Sichere dir deinen Tisch</h1>
+          <p>Wir melden uns schnellstmöglich mit einer Bestätigung.</p>
         </div>
       </section>
 
-      <!-- FORMULAR -->
-      <section class="section reserv-form-section">
-        <div class="container reserv-form-layout">
-          <div class="reserv-form-box">
-            <h2>Reservierungsanfrage</h2>
-            <p class="reserv-form-note">
-              Bitte beachte: Die Reservierung ist erst nach unserer Bestätigung
-              gültig.
-            </p>
+      <section class="section reservation-section">
+        <div class="container">
+          <form class="reservation-form">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" required />
+            </label>
+            <label>
+              <span>E-Mail</span>
+              <input type="email" name="email" required />
+            </label>
+            <label>
+              <span>Datum</span>
+              <input type="date" name="date" required />
+            </label>
+            <label>
+              <span>Uhrzeit</span>
+              <input type="time" name="time" required />
+            </label>
+            <label>
+              <span>Personen</span>
+              <input type="number" name="people" min="1" max="20" required />
+            </label>
 
-            <form
-              action="https://formspree.io/f/mnqekvqa"
-              method="POST"
-              class="form"
-            >
-              <input type="hidden" name="formular_typ" value="Reservierung" />
+            <label>
+              <span>Kommentar (optional)</span>
+              <textarea name="message" rows="4"></textarea>
+            </label>
 
-              <div class="reserv-form-grid">
-                <label>
-                  <span>Name</span>
-                  <input type="text" name="name" required />
-                </label>
-
-                <label>
-                  <span>E-Mail</span>
-                  <input type="email" name="email" required />
-                </label>
-
-                <label>
-                  <span>Telefon</span>
-                  <input type="text" name="telefon" />
-                </label>
-
-                <label>
-                  <span>Personenanzahl</span>
-                  <input
-                    type="number"
-                    name="personen"
-                    min="1"
-                    max="12"
-                    required
-                  />
-                </label>
-
-                <label>
-                  <span>Datum</span>
-                  <input type="date" name="datum" required />
-                </label>
-
-                <label>
-                  <span>Uhrzeit</span>
-                  <input type="time" name="uhrzeit" required />
-                </label>
-
-                <label>
-                  <span>Anlass</span>
-                  <select name="anlass">
-                    <option value="">Bitte wählen</option>
-                    <option value="Abendessen">Abendessen</option>
-                    <option value="Date Night">Date Night</option>
-                    <option value="Geburtstag">Geburtstag</option>
-                    <option value="Aurora Night">Aurora Night</option>
-                    <option value="Sonstiges">Sonstiges</option>
-                  </select>
-                </label>
-              </div>
-
-              <label>
-                <span>Nachricht / Hinweise</span>
-                <textarea
-                  name="nachricht"
-                  rows="4"
-                  placeholder="z. B. Unverträglichkeiten, Kinder, besondere Wünsche"
-                ></textarea>
-              </label>
-
-              <button type="submit" class="btn-primary">
-                Reservierung anfragen
-              </button>
-            </form>
-          </div>
-
-          <div class="reserv-side-box">
-            <h2>Gut zu wissen</h2>
-            <ul class="reserv-facts">
-              <li>Reservierungen ab 7 Personen gern telefonisch.</li>
-              <li>
-                Aurora Nights sind schnell ausgebucht – frühzeitig anfragen.
-              </li>
-              <li>Wenn du dich verspätest, gib uns bitte kurz Bescheid.</li>
-            </ul>
-
-            <h2>Hinweis</h2>
-            <p class="reserv-small">
-              Mit dem Absenden deiner Anfrage stimmst du der Verarbeitung deiner
-              Daten gemäß unserer
-              <a href="datenschutz.html">Datenschutzerklärung</a> zu.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- CTA -->
-      <section class="section section-cta">
-        <div class="container cta-box">
-          <div class="cta-text">
-            <h2>Vorfreude ist die schönste Freude</h2>
-            <p>
-              Schau dir vor deinem Besuch schon mal unsere Speisekarte und die
-              Galerie an.
-            </p>
-          </div>
-          <div class="cta-actions">
-            <a href="speisekarte.html" class="btn-primary"
-              >Speisekarte ansehen</a
-            >
-            <a href="galerie.html" class="btn-ghost">Zur Galerie</a>
-          </div>
+            <button type="submit" class="btn-primary">Anfrage senden</button>
+          </form>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="container footer-grid">
-        <div>
-          <h3>Bistro Aurora</h3>
-          <p>Aurora-Platz 7 · 44135 Dortmund<br />Tel.: 0231 / 123 456 78</p>
-        </div>
-        <div>
-          <h3>Navigation</h3>
-          <ul class="footer-links">
-            <li><a href="index.html">Start</a></li>
-            <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="speisekarte.html">Speisekarte</a></li>
-            <li><a href="galerie.html">Galerie</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-            <li><a href="reservierung.html">Reservierung</a></li>
-            <li><a href="impressum.html">Impressum</a></li>
-            <li><a href="datenschutz.html">Datenschutz</a></li>
-          </ul>
-        </div>
-        <div>
-          <h3>Öffnungszeiten</h3>
-          <p>
-            Mo–Fr: 11:30 – 22:00 Uhr<br />Sa: 10:00 – 23:00 Uhr · So: Ruhetag
-          </p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© Bistro Aurora · Fiktives Projekt für Portfolio-Zwecke</p>
+      <div class="container footer-bottom">
+        <p>© Bistro Aurora · Fiktives Projekt</p>
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="js/core.js" defer></script>
   </body>
 </html>

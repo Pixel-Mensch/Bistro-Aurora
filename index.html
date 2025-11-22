@@ -6,8 +6,9 @@
     <title>Bistro Aurora – Dein Wohlfühl-Bistro in Dortmund</title>
     <meta
       name="description"
-      content="Bistro Aurora in Dortmund: warme Atmosphäre, hausgemachte Gerichte, guter Kaffee und entspannte Abende. Jetzt entdecken und reservieren."
+      content="Bistro Aurora in Dortmund: warme Atmosphäre, hausgemachte Gerichte, guter Kaffee und entspannte Abende. Jetzt entdecken, reservieren und online bestellen."
     />
+    <meta name="theme-color" content="#050812" />
 
     <!-- Open Graph -->
     <meta
@@ -16,27 +17,84 @@
     />
     <meta
       property="og:description"
-      content="Warme Atmosphäre, hausgemachte Küche und entspannte Abende im Bistro Aurora."
+      content="Warme Atmosphäre, hausgemachte Küche, Aurora Nights und Online-Bestellungen im Bistro Aurora."
     />
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://pixel-mensch.github.io/Bistro-Aurora/"
+      content="https://example.com/"
     />
-    <meta property="og:image" content="Bilder/hero-aurora.jpg" />
+    <meta property="og:image" content="Bilder/hero-aurora-1200.jpg" />
+
+    <!-- Preload kritischer Ressourcen -->
+    <link rel="preload" as="image" href="Bilder/hero-aurora-1200.jpg" />
+    <link rel="preload" as="style" href="css/styles.css" />
+    <link rel="preload" as="script" href="js/core.js" />
+    <link rel="preload" as="script" href="js/home.js" />
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css" />
 
-    <!-- Favicon (optional) -->
+    <!-- Favicon -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="Bilder/favicon-32.png"
     />
+
+    <!-- Prefetch andere Seiten -->
+    <link rel="prefetch" href="speisekarte.html" />
+    <link rel="prefetch" href="reservierung.html" />
+    <link rel="prefetch" href="galerie.html" />
+    <link rel="prefetch" href="events.html" />
+    <link rel="prefetch" href="kontakt.html" />
+
+    <!-- Schema.org Restaurant (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Restaurant",
+        "name": "Bistro Aurora",
+        "image": "https://example.com/Bilder/hero-aurora-1200.jpg",
+        "@id": "https://example.com/",
+        "url": "https://example.com/",
+        "telephone": "+49-231-12345678",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Aurora-Platz 7",
+          "addressLocality": "Dortmund",
+          "postalCode": "44135",
+          "addressCountry": "DE"
+        },
+        "servesCuisine": ["Europäisch", "Hausgemacht"],
+        "priceRange": "$$",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "11:30",
+            "closes": "22:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "10:00",
+            "closes": "23:00"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
+    <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
+
     <header class="site-header">
       <div class="container header-inner">
         <a href="index.html" class="logo">
@@ -46,30 +104,48 @@
           </span>
         </a>
 
-        <button
-          class="nav-toggle"
-          aria-label="Menü öffnen"
-          aria-expanded="false"
-        >
-          <span class="nav-toggle-bar"></span>
-          <span class="nav-toggle-bar"></span>
-        </button>
+        <div class="header-actions">
+          <button
+            class="theme-toggle"
+            type="button"
+            aria-label="Darstellung umschalten"
+          >
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
 
-        <nav class="main-nav">
+          <button
+            class="nav-toggle"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+
+        <nav class="main-nav" aria-label="Hauptnavigation">
           <ul>
-            <li><a href="index.html" class="is-active">Start</a></li>
+            <li>
+              <a
+                href="index.html"
+                class="is-active"
+                aria-current="page"
+                >Start</a
+              >
+            </li>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="speisekarte.html">Speisekarte &amp; Online-Bestellung</a></li>
             <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="events.html">Events</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- HERO -->
-      <section class="hero">
+      <section class="hero section">
         <div class="container hero-grid">
           <div class="hero-content">
             <div class="hero-badge">Dortmund · Seit 2024</div>
@@ -79,7 +155,7 @@
             <p class="hero-lead">
               Ein kleiner Ort mit großem Herz: hausgemachte Gerichte, gute
               Drinks und eine Atmosphäre, in der man den Tag einfach hinter sich
-              lassen kann.
+              lassen kann – jetzt auch online bestellen.
             </p>
 
             <div class="hero-meta">
@@ -97,26 +173,53 @@
             </div>
 
             <div class="hero-actions">
-              <a href="kontakt.html" class="btn-primary"
-                >Jetzt Tisch reservieren</a
+              <a href="speisekarte.html" class="btn-primary"
+                >Online bestellen</a
               >
-              <a href="speisekarte.html" class="btn-ghost"
-                >Speisekarte ansehen</a
+              <a href="reservierung.html" class="btn-ghost"
+                >Tisch reservieren</a
               >
             </div>
 
             <p class="hero-note">
-              ✨ Ideal für Date Night, kleine Feiern und entspannte
-              After-Work-Drinks.
+              ✨ Ideal für Date Night, kleine Feiern, entspannte After-Work-Drinks
+              und Abholung/Lieferung nach Hause.
             </p>
+
+            <a href="#aurora-nights" class="hero-scroll-hint">
+              <span>Mehr zu Aurora Nights</span>
+              <span class="hero-scroll-icon">↓</span>
+            </a>
           </div>
 
           <div class="hero-media">
             <figure class="hero-main-image">
-              <img
-                src="Bilder/hero-aurora.jpg"
-                alt="Stimmungsvolles Bistro mit warmem Licht und gedeckten Tischen"
-              />
+              <picture>
+                <source
+                  srcset="
+                    Bilder/hero-aurora-800.webp 800w,
+                    Bilder/hero-aurora-1200.webp 1200w,
+                    Bilder/hero-aurora-1600.webp 1600w
+                  "
+                  sizes="(max-width: 800px) 100vw, 50vw"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    Bilder/hero-aurora-800.jpg 800w,
+                    Bilder/hero-aurora-1200.jpg 1200w,
+                    Bilder/hero-aurora-1600.jpg 1600w
+                  "
+                  sizes="(max-width: 800px) 100vw, 50vw"
+                  type="image/jpeg"
+                />
+                <img
+                  src="Bilder/hero-aurora-1200.jpg"
+                  alt="Stimmungsvolles Bistro mit warmem Licht und gedeckten Tischen"
+                  loading="eager"
+                  decoding="async"
+                />
+              </picture>
               <figcaption>
                 Goldenes Licht, leise Musik, entspannte Gespräche.
               </figcaption>
@@ -127,6 +230,8 @@
                 <img
                   src="Bilder/gericht-1.jpg"
                   alt="Hausgemachtes Gericht im Bistro Aurora"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>Frisch & hausgemacht</figcaption>
               </figure>
@@ -134,6 +239,8 @@
                 <img
                   src="Bilder/gericht-2.jpg"
                   alt="Dessert im Bistro Aurora"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>Desserts mit Liebe</figcaption>
               </figure>
@@ -141,6 +248,8 @@
                 <img
                   src="Bilder/drinks-1.jpg"
                   alt="Drinks an der Bar im Bistro Aurora"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <figcaption>Feine Drinks</figcaption>
               </figure>
@@ -150,7 +259,7 @@
       </section>
 
       <!-- HIGHLIGHTS -->
-      <section class="section section-highlights">
+      <section class="section section-highlights reveal-section">
         <div class="container">
           <header class="section-header">
             <p class="eyebrow">Was dich bei uns erwartet</p>
@@ -158,7 +267,7 @@
             <p>
               Bistro Aurora ist kein Massenbetrieb. Wir setzen auf wenige,
               ausgewählte Gerichte, gute Zutaten und eine Atmosphäre, die sich
-              eher nach Wohnzimmer als nach Gastronomie fühlt.
+              eher nach Wohnzimmer als nach Gastronomie anfühlt.
             </p>
           </header>
 
@@ -182,11 +291,11 @@
             </article>
 
             <article class="card">
-              <div class="card-icon">🥂</div>
-              <h3>Abende mit Freunden</h3>
+              <div class="card-icon">📦</div>
+              <h3>Abholung &amp; Lieferung</h3>
               <p>
-                Ob Date Night oder Feier im kleinen Kreis – wir sorgen für den
-                passenden Rahmen.
+                Deine Lieblingsgerichte frisch zubereitet – zur Abholung oder
+                innerhalb unseres Liefergebiets direkt zu dir nach Hause.
               </p>
             </article>
           </div>
@@ -194,7 +303,7 @@
       </section>
 
       <!-- FEATURE -->
-      <section class="section section-feature">
+      <section class="section section-feature reveal-section">
         <div class="container feature-grid">
           <div class="feature-text">
             <p class="eyebrow">Signature-Abende</p>
@@ -206,12 +315,12 @@
               Fine-Dining-Charakter.
             </p>
             <ul class="feature-list">
-              <li>3-Gang-Menü mit vegetarischer Alternative</li>
+              <li>3–4 Gänge mit vegetarischer Alternative</li>
               <li>Fein abgestimmte Wein- und Drinkbegleitung</li>
               <li>Limitierte Plätze · Reservierung empfohlen</li>
             </ul>
 
-            <a href="kontakt.html" class="btn-primary btn-small"
+            <a href="reservierung.html" class="btn-primary btn-small"
               >Platz für Aurora Night anfragen</a
             >
           </div>
@@ -220,13 +329,76 @@
             <img
               src="Bilder/interior-1.jpg"
               alt="Kerzenschein und gedeckte Tische im Bistro Aurora"
+              loading="lazy"
+              decoding="async"
             />
           </div>
         </div>
       </section>
 
+      <!-- AURORA NIGHTS SPECIAL -->
+      <section class="section section-aurora-nights reveal-section" id="aurora-nights">
+        <div class="container aurora-nights-grid">
+          <div class="aurora-nights-text">
+            <p class="eyebrow">Aurora Nights</p>
+            <h2>Einmal im Monat: unser Signature-Abend</h2>
+            <p>
+              An Aurora Nights fahren wir das volle Programm: mehr Gänge,
+              mehr Kerzen, abgestimmte Drinks und Zeit für einen Abend, der
+              sich wie ein Kurzurlaub anfühlt – ohne steifes Fine Dining.
+            </p>
+
+            <div class="aurora-nights-meta">
+              <div class="aurora-badge">
+                <span class="aurora-badge-label">Nächster Termin</span>
+                <span class="aurora-badge-value">Jeder 1. Samstag im Monat</span>
+              </div>
+              <ul class="aurora-facts">
+                <li>3–4 Gänge mit vegetarischer Alternative</li>
+                <li>Limitierte Plätze · Reservierung empfohlen</li>
+                <li>Perfekt für Date Night oder kleine Feiern</li>
+              </ul>
+            </div>
+
+            <div class="aurora-nights-actions">
+              <a href="reservierung.html" class="btn-primary btn-small">
+                Platz für Aurora Night anfragen
+              </a>
+              <a href="speisekarte.html" class="btn-ghost btn-small">
+                Aktuelle Karte ansehen
+              </a>
+            </div>
+
+            <p class="aurora-note">
+              Hinweis: Aurora Nights sind schnell ausgebucht – am besten frühzeitig
+              anfragen. Wir bestätigen deine Reservierung immer noch einmal per Mail.
+            </p>
+          </div>
+
+          <aside class="aurora-nights-aside">
+            <div class="aurora-card">
+              <h3>Was dich erwartet</h3>
+              <ul>
+                <li>Begrüßungsdrink zum Ankommen</li>
+                <li>Abgestimmtes Menü in mehreren Gängen</li>
+                <li>Kerzenlicht, ruhige Musik, kleine Tische</li>
+              </ul>
+            </div>
+
+            <div class="aurora-card aurora-card-soft">
+              <h3>Ideal für</h3>
+              <ul>
+                <li>Geburtstage im kleinen Kreis</li>
+                <li>Date Night mit viel Zeit</li>
+                <li>After-Work-Abende mit Freunden</li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </section>
+
       <!-- REVIEWS -->
-      <section class="section section-reviews">
+      <section class="section section-reviews reveal-section">
         <div class="container">
           <header class="section-header">
             <p class="eyebrow">Stimmen unserer Gäste</p>
@@ -261,19 +433,129 @@
         </div>
       </section>
 
+      <!-- FAQ -->
+      <section class="section section-faq reveal-section" id="faq">
+        <div class="container">
+          <header class="section-header">
+            <p class="eyebrow">Fragen</p>
+            <h2>Häufige Fragen zu deinem Besuch</h2>
+            <p>
+              Ein paar Antworten auf Dinge, die uns Gäste rund um Reservierung,
+              Online-Bestellung und Lieferung häufig fragen.
+            </p>
+          </header>
+
+          <div class="faq-list" role="list">
+            <article class="faq-item" role="listitem">
+              <button class="faq-question" aria-expanded="true">
+                <span>Muss ich immer reservieren oder kann ich spontan kommen?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Spontan ist immer möglich, allerdings können wir dir dann keinen Platz
+                  garantieren – besonders am Wochenende und an Aurora Nights.
+                  Für Abende mit Freunden oder ein Date empfehlen wir kurz zu reservieren.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item" role="listitem">
+              <button class="faq-question" aria-expanded="false">
+                <span>Bietet ihr Abholung und Lieferung an?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer" hidden>
+                <p>
+                  Ja. Du kannst über unsere Speisekarte Gerichte zur Abholung oder
+                  Lieferung bestellen. Lieferung ist aktuell innerhalb unseres
+                  Liefergebiets in Dortmund möglich.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item" role="listitem">
+              <button class="faq-question" aria-expanded="false">
+                <span>Welche Zahlungsarten gibt es online?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer" hidden>
+                <p>
+                  Online kannst du bequem über PayPal bezahlen (inkl. Lastschrift,
+                  Kreditkarte, ggf. PayPal Pay Later). Vor Ort akzeptieren wir
+                  EC-/Karte sowie Barzahlung.
+                </p>
+              </div>
+            </article>
+
+            <article class="faq-item" role="listitem">
+              <button class="faq-question" aria-expanded="false">
+                <span>Kann ich das Bistro für eine kleine Feier mieten?</span>
+                <span class="faq-icon" aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer" hidden>
+                <p>
+                  Für Geburtstage, kleine Firmenabende oder private Runden finden wir fast
+                  immer ein Setup. Schreib uns kurz mit Datum, Uhrzeit und Personenzahl –
+                  wir melden uns mit Vorschlägen zurück.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Newsletter -->
+      <section class="section section-newsletter reveal-section" id="newsletter">
+        <div class="container newsletter-box">
+          <div class="newsletter-text">
+            <p class="eyebrow">Newsletter</p>
+            <h2>„Aurora Nights“ &amp; aktuelle Menüs zuerst erfahren</h2>
+            <p>
+              Trage dich ein, wenn du über neue Menüs, Aurora Nights, Events
+              und besondere Abende im Bistro Aurora informiert werden möchtest.
+              Kein Spam, nur gelegentliche Updates.
+            </p>
+          </div>
+
+          <form class="newsletter-form" action="#" method="post">
+            <label class="newsletter-label">
+              <span>E-Mail-Adresse</span>
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="deine@email.de"
+                autocomplete="email"
+              />
+            </label>
+
+            <button type="submit" class="btn-primary btn-small">
+              Anmelden
+            </button>
+
+            <p class="newsletter-note">
+              Du kannst dich jederzeit mit einem Klick wieder abmelden. Mit der
+              Anmeldung stimmst du der Verarbeitung deiner Daten gemäß unserer
+              <a href="datenschutz.html">Datenschutzerklärung</a> zu.
+            </p>
+          </form>
+        </div>
+      </section>
+
       <!-- CTA -->
-      <section class="section section-cta">
+      <section class="section section-cta reveal-section">
         <div class="container cta-box">
           <div class="cta-text">
             <h2>Lust auf einen Abend im Aurora?</h2>
             <p>
-              Schick uns eine kurze Nachricht mit Datum, Uhrzeit und
-              Personenzahl – wir melden uns so schnell wie möglich zurück.
+              Reserviere dir einen Tisch oder bestelle dein Lieblingsgericht
+              entspannt nach Hause.
             </p>
           </div>
           <div class="cta-actions">
-            <a href="kontakt.html" class="btn-primary">Reservierung anfragen</a>
-            <a href="speisekarte.html" class="btn-ghost">Zur Speisekarte</a>
+            <a href="speisekarte.html" class="btn-primary">Online bestellen</a>
+            <a href="reservierung.html" class="btn-ghost">Tisch reservieren</a>
           </div>
         </div>
       </section>
@@ -283,16 +565,20 @@
       <div class="container footer-grid">
         <div>
           <h3>Bistro Aurora</h3>
-          <p>Aurora-Platz 7 · 44135 Dortmund<br />Tel.: 0231 / 123 456 78</p>
+          <p>
+            Aurora-Platz 7 · 44135 Dortmund<br />Tel.: 0231 / 123 456 78
+          </p>
         </div>
         <div>
           <h3>Navigation</h3>
           <ul class="footer-links">
             <li><a href="index.html">Start</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="speisekarte.html">Speisekarte</a></li>
+            <li><a href="speisekarte.html">Speisekarte &amp; Online-Bestellung</a></li>
             <li><a href="galerie.html">Galerie</a></li>
-            <li><a href="reservierung.html">Kontakt</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="reservierung.html">Reservierung</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
             <li><a href="impressum.html">Impressum</a></li>
             <li><a href="datenschutz.html">Datenschutz</a></li>
           </ul>
@@ -310,6 +596,11 @@
       </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <button class="back-to-top" type="button" aria-label="Nach oben">
+      ↑
+    </button>
+
+    <script src="js/core.js" defer></script>
+    <script src="js/home.js" defer></script>
   </body>
 </html>
