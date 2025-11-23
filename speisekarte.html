@@ -61,369 +61,758 @@
         </div>
       </section>
 
-      <!-- SPEISEKARTE -->
-      <section class="menu-section" aria-labelledby="menu-classics">
-        <div class="menu-section-inner">
-          <h2 id="menu-classics" class="menu-category-title">Klassiker</h2>
+      <!-- NEU: Layout-Wrapper für Speisekarte (links) + Warenkorb (rechts) -->
+      <div class="menu-page-layout">
+        <!-- LINKE SPALTE: Speisekarte -->
+        <div class="menu-page-main">
+          <!-- ===================== -->
+          <!-- SPEISEKARTE – LANG    -->
+          <!-- ===================== -->
+          <!-- KLASSIKER MIT BILDERN -->
+          <!-- ===================== -->
+          <section class="menu-section" aria-labelledby="menu-classics">
+            <div class="menu-section-inner">
+              <h2 id="menu-classics" class="menu-category-title">Klassiker</h2>
 
-          <ul class="menu-list">
-            <li
-              class="menu-item"
-              data-id="bruschetta-aurora"
-              data-name="Bruschetta Aurora"
-              data-price="6.50"
-            >
-              <div class="menu-item-main">
-                <h3 class="menu-item-title">Bruschetta Aurora</h3>
-                <p class="menu-item-desc">
-                  Geröstetes Landbrot mit marinierten Tomaten, Basilikum und
-                  Knoblauchöl.
-                </p>
-              </div>
-              <div class="menu-item-meta">
-                <span class="menu-item-price">6,50&nbsp;€</span>
-                <button
-                  type="button"
-                  class="menu-item-add-btn"
-                  data-add-to-cart
+              <ul class="menu-list">
+                <li
+                  class="menu-item"
+                  data-id="bruschetta-aurora"
+                  data-name="Bruschetta Aurora"
+                  data-price="6.50"
                 >
-                  In den Warenkorb
-                </button>
-              </div>
-            </li>
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/bruschetta-aurora.jpg"
+                      alt="Bruschetta Aurora – geröstetes Landbrot mit Tomaten und Basilikum"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Bruschetta Aurora</h3>
+                    <p class="menu-item-desc">
+                      Geröstetes Landbrot mit marinierten Tomaten, Basilikum und
+                      Knoblauchöl.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">6,50&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
 
-            <li
-              class="menu-item"
-              data-id="suppe-des-tages"
-              data-name="Suppe des Tages"
-              data-price="7.90"
-            >
-              <div class="menu-item-main">
-                <h3 class="menu-item-title">Suppe des Tages</h3>
-                <p class="menu-item-desc">
-                  Hausgemachte, saisonale Suppe – bitte tagesaktuell im Bistro
-                  erfragen.
-                </p>
-              </div>
-              <div class="menu-item-meta">
-                <span class="menu-item-price">7,90&nbsp;€</span>
-                <button
-                  type="button"
-                  class="menu-item-add-btn"
-                  data-add-to-cart
+                <li
+                  class="menu-item"
+                  data-id="suppe-des-tages"
+                  data-name="Suppe des Tages"
+                  data-price="7.90"
                 >
-                  In den Warenkorb
-                </button>
-              </div>
-            </li>
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/suppe-des-tages.jpg"
+                      alt="Hausgemachte Suppe des Tages im Bistro Aurora"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Suppe des Tages</h3>
+                    <p class="menu-item-desc">
+                      Hausgemachte, saisonale Suppe – bitte tagesaktuell im
+                      Bistro erfragen.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">7,90&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
 
-            <li
-              class="menu-item"
-              data-id="salat-aurora"
-              data-name="Salat Aurora"
-              data-price="11.50"
-            >
-              <div class="menu-item-main">
-                <h3 class="menu-item-title">Salat Aurora</h3>
-                <p class="menu-item-desc">
-                  Bunter Blattsalat mit mariniertem Gemüse, Croûtons und
-                  Aurora-Hausdressing.
-                </p>
-              </div>
-              <div class="menu-item-meta">
-                <span class="menu-item-price">11,50&nbsp;€</span>
-                <button
-                  type="button"
-                  class="menu-item-add-btn"
-                  data-add-to-cart
+                <li
+                  class="menu-item"
+                  data-id="salat-aurora"
+                  data-name="Salat Aurora"
+                  data-price="11.50"
                 >
-                  In den Warenkorb
-                </button>
-              </div>
-            </li>
-          </ul>
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/salat-aurora.jpg"
+                      alt="Salat Aurora – bunter Blattsalat mit mariniertem Gemüse"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Salat Aurora</h3>
+                    <p class="menu-item-desc">
+                      Bunter Blattsalat mit mariniertem Gemüse, Croûtons und
+                      Aurora-Hausdressing.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">11,50&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="flammkuchen-klassik"
+                  data-name="Flammkuchen Klassik"
+                  data-price="10.50"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/flammkuchen-klassik.jpg"
+                      alt="Flammkuchen Klassik mit Speck und Zwiebeln"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Flammkuchen Klassik</h3>
+                    <p class="menu-item-desc">
+                      Dünner knuspriger Boden mit Zwiebeln, Speck und Sauerrahm.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">10,50&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="flammkuchen-veggie"
+                  data-name="Flammkuchen Veggie"
+                  data-price="10.90"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/flammkuchen-veggie.jpg"
+                      alt="Flammkuchen mit Gemüse und Ziegenkäse"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Flammkuchen Veggie</h3>
+                    <p class="menu-item-desc">
+                      Mit saisonalem Gemüse, Kräutern und mildem Ziegenkäse.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">10,90&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- ===================== -->
+          <!-- PASTA & HAUPTGERICHTE -->
+          <!-- ===================== -->
+          <section class="menu-section" aria-labelledby="menu-pasta">
+            <div class="menu-section-inner">
+              <h2 id="menu-pasta" class="menu-category-title">
+                Pasta &amp; Hauptgerichte
+              </h2>
+
+              <ul class="menu-list">
+                <li
+                  class="menu-item"
+                  data-id="pasta-aurora"
+                  data-name="Pasta Aurora"
+                  data-price="13.90"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/pasta-aurora.jpg"
+                      alt="Pasta Aurora in cremiger Tomatensauce"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Pasta Aurora</h3>
+                    <p class="menu-item-desc">
+                      Hausgemachte Pasta in cremiger Tomaten-Sahne-Sauce mit
+                      frischem Basilikum.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">13,90&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="risotto-waldpilze"
+                  data-name="Risotto mit Waldpilzen"
+                  data-price="15.90"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/risotto-waldpilze.jpg"
+                      alt="Cremiges Risotto mit Waldpilzen"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Risotto mit Waldpilzen</h3>
+                    <p class="menu-item-desc">
+                      Cremiges Risotto mit gebratenen Pilzen, Parmesan und
+                      Kräuteröl.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">15,90&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="burger-aurora"
+                  data-name="Aurora Burger"
+                  data-price="14.50"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/burger-aurora.jpg"
+                      alt="Aurora Burger mit Fries"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Aurora Burger</h3>
+                    <p class="menu-item-desc">
+                      Saftiges Patty, geschmolzener Käse, karamellisierte
+                      Zwiebeln, Aurora-Sauce, dazu hausgemachte Fries.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">14,50&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="gnocchi-veggie"
+                  data-name="Gnocchi Veggie"
+                  data-price="13.50"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/gnocchi-veggie.jpg"
+                      alt="Gnocchi mit geröstetem Gemüse"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Gnocchi Veggie</h3>
+                    <p class="menu-item-desc">
+                      Kartoffelgnocchi mit geröstetem Gemüse, Rucola und
+                      leichtem Zitronenöl.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">13,50&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="hähnchenfilet"
+                  data-name="Zitronen-Hähnchenfilet"
+                  data-price="16.40"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/zitronen-haehnchenfilet.jpg"
+                      alt="Zitronen-Hähnchenfilet mit Gemüse"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Zitronen-Hähnchenfilet</h3>
+                    <p class="menu-item-desc">
+                      Mit Kräuterkruste, Gemüse und Rosmarinkartoffeln.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">16,40&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="lachsfilet"
+                  data-name="Lachsfilet Aurora"
+                  data-price="18.70"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/lachsfilet-aurora.jpg"
+                      alt="Lachsfilet auf Spinatbett"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Lachsfilet Aurora</h3>
+                    <p class="menu-item-desc">
+                      Auf Spinatbett mit Knoblauch-Zitronensauce.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">18,70&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="steak"
+                  data-name="Gegrilltes Rindersteak"
+                  data-price="22.90"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/rindersteak.jpg"
+                      alt="Gegrilltes Rindersteak mit Beilagen"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Gegrilltes Rindersteak</h3>
+                    <p class="menu-item-desc">
+                      Mit Kräuterbutter, Pfefferjus und Beilage nach Wahl.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">22,90&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="vegan-bowl"
+                  data-name="Aurora Vegan Bowl"
+                  data-price="12.90"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/vegan-bowl.jpg"
+                      alt="Bunte Aurora Vegan Bowl"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Aurora Vegan Bowl</h3>
+                    <p class="menu-item-desc">
+                      Quinoa, Hummus, Avocado, Sesamgemüse und frische Kräuter.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">12,90&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- ============ -->
+          <!-- DESSERTS     -->
+          <!-- ============ -->
+          <section class="menu-section" aria-labelledby="menu-desserts">
+            <div class="menu-section-inner">
+              <h2 id="menu-desserts" class="menu-category-title">Desserts</h2>
+
+              <ul class="menu-list">
+                <li
+                  class="menu-item"
+                  data-id="tiramisu-aurora"
+                  data-name="Tiramisu Aurora"
+                  data-price="7.50"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/tiramisu-aurora.jpg"
+                      alt="Tiramisu Aurora im Glas"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Tiramisu Aurora</h3>
+                    <p class="menu-item-desc">
+                      Klassisches Tiramisu mit Espresso und leichter
+                      Mascarpone-Creme.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">7,50&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="schokokuchen"
+                  data-name="Warmer Schokokuchen"
+                  data-price="7.90"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/schokokuchen.jpg"
+                      alt="Warmer Schokokuchen mit Vanilleeis"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Warmer Schokokuchen</h3>
+                    <p class="menu-item-desc">
+                      Lauwarm mit flüssigem Kern, serviert mit Vanilleeis.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">7,90&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="panna-cotta"
+                  data-name="Panna Cotta"
+                  data-price="6.90"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/panna-cotta.jpg"
+                      alt="Panna Cotta mit Himbeerspiegel"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Panna Cotta</h3>
+                    <p class="menu-item-desc">
+                      Samtig, mit fruchtigem Himbeerspiegel.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">6,90&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="creme-brulee"
+                  data-name="Crème Brûlée"
+                  data-price="7.20"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/creme-brulee.jpg"
+                      alt="Crème Brûlée mit Karamellkruste"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Crème Brûlée</h3>
+                    <p class="menu-item-desc">
+                      Klassische Vanillecreme mit knuspriger Karamellkruste.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">7,20&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="eisvariation"
+                  data-name="Eisvariation Aurora"
+                  data-price="6.50"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/eisvariation-aurora.jpg"
+                      alt="Eisvariation mit drei Kugeln"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Eisvariation Aurora</h3>
+                    <p class="menu-item-desc">
+                      Drei Kugeln nach Wahl mit Topping.
+                    </p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">6,50&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+
+                <li
+                  class="menu-item"
+                  data-id="apfelstrudel"
+                  data-name="Apfelstrudel"
+                  data-price="6.90"
+                >
+                  <div class="menu-item-main">
+                    <img
+                      class="menu-item-image"
+                      src="Bilder/apfelstrudel.jpg"
+                      alt="Apfelstrudel mit Vanillesoße"
+                      loading="lazy"
+                    />
+                    <h3 class="menu-item-title">Apfelstrudel</h3>
+                    <p class="menu-item-desc">Warm serviert mit Vanillesoße.</p>
+                  </div>
+                  <div class="menu-item-meta">
+                    <span class="menu-item-price">6,90&nbsp;€</span>
+                    <button
+                      type="button"
+                      class="menu-item-add-btn"
+                      data-add-to-cart
+                    >
+                      In den Warenkorb
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
         </div>
-      </section>
 
-      <section class="menu-section" aria-labelledby="menu-pasta">
-        <div class="menu-section-inner">
-          <h2 id="menu-pasta" class="menu-category-title">
-            Pasta &amp; Hauptgerichte
-          </h2>
+        <!-- RECHTE SPALTE: Warenkorb (sticky) -->
+        <aside
+          class="menu-page-cart"
+          aria-label="Warenkorb &amp; Online-Bestellung"
+        >
+          <!-- WARENKORB & BESTELLUNG (Markup unverändert, nur verschoben) -->
+          <section class="order-section" aria-labelledby="order-heading">
+            <div class="order-section-inner">
+              <h2 id="order-heading">Dein Warenkorb</h2>
 
-          <ul class="menu-list">
-            <li
-              class="menu-item"
-              data-id="pasta-aurora"
-              data-name="Pasta Aurora"
-              data-price="13.90"
-            >
-              <div class="menu-item-main">
-                <h3 class="menu-item-title">Pasta Aurora</h3>
-                <p class="menu-item-desc">
-                  Hausgemachte Pasta in cremiger Tomaten-Sahne-Sauce mit
-                  frischem Basilikum.
-                </p>
+              <div id="cart-empty-message" class="cart-empty-message">
+                Dein Warenkorb ist noch leer. Füge Gerichte hinzu, um deine
+                Bestellung zu starten.
               </div>
-              <div class="menu-item-meta">
-                <span class="menu-item-price">13,90&nbsp;€</span>
+
+              <ul
+                id="cart-items"
+                class="cart-items"
+                aria-live="polite"
+                aria-label="Warenkorbinhalt"
+              >
+                <!-- Dynamisch durch JS gefüllt -->
+              </ul>
+
+              <div class="cart-summary">
+                <div class="cart-summary-row">
+                  <span>Zwischensumme</span>
+                  <span id="cart-subtotal">0,00&nbsp;€</span>
+                </div>
+                <div class="cart-summary-row">
+                  <span>Liefergebühr</span>
+                  <span id="cart-delivery-fee">0,00&nbsp;€</span>
+                </div>
+                <div class="cart-summary-row cart-summary-total">
+                  <span>Gesamt</span>
+                  <span id="cart-total">0,00&nbsp;€</span>
+                </div>
+              </div>
+
+              <fieldset class="order-mode">
+                <legend>Abholung oder Lieferung?</legend>
+                <label>
+                  <input
+                    type="radio"
+                    name="deliveryMode"
+                    value="pickup"
+                    checked
+                  />
+                  Abholung
+                </label>
+                <label>
+                  <input type="radio" name="deliveryMode" value="delivery" />
+                  Lieferung
+                </label>
+              </fieldset>
+
+              <form id="order-form" class="order-form" novalidate>
+                <div class="form-row">
+                  <label for="order-name">Name *</label>
+                  <input
+                    id="order-name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    required
+                  />
+                </div>
+
+                <div class="form-row">
+                  <label for="order-phone">Telefon *</label>
+                  <input
+                    id="order-phone"
+                    name="phone"
+                    type="tel"
+                    autocomplete="tel"
+                    required
+                  />
+                </div>
+
+                <div class="form-row">
+                  <label for="order-email">E-Mail</label>
+                  <input
+                    id="order-email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                  />
+                </div>
+
+                <div class="form-row" id="address-row">
+                  <label for="order-address">Adresse (für Lieferung)</label>
+                  <textarea
+                    id="order-address"
+                    name="address"
+                    rows="2"
+                  ></textarea>
+                </div>
+
+                <div class="form-row">
+                  <label for="order-notes">Hinweise (optional)</label>
+                  <textarea
+                    id="order-notes"
+                    name="notes"
+                    rows="2"
+                    placeholder="Allergien, Wunsch-Zeitfenster, Klingelhinweis …"
+                  ></textarea>
+                </div>
+
                 <button
                   type="button"
-                  class="menu-item-add-btn"
-                  data-add-to-cart
+                  id="place-order-btn"
+                  class="order-submit-btn"
                 >
-                  In den Warenkorb
+                  Jetzt verbindlich bestellen
                 </button>
-              </div>
-            </li>
 
-            <li
-              class="menu-item"
-              data-id="risotto-waldpilze"
-              data-name="Risotto mit Waldpilzen"
-              data-price="15.90"
-            >
-              <div class="menu-item-main">
-                <h3 class="menu-item-title">Risotto mit Waldpilzen</h3>
-                <p class="menu-item-desc">
-                  Cremiges Risotto mit gebratenen Pilzen, Parmesan und
-                  Kräuteröl.
-                </p>
-              </div>
-              <div class="menu-item-meta">
-                <span class="menu-item-price">15,90&nbsp;€</span>
-                <button
-                  type="button"
-                  class="menu-item-add-btn"
-                  data-add-to-cart
-                >
-                  In den Warenkorb
-                </button>
-              </div>
-            </li>
+                <p
+                  id="order-feedback"
+                  class="order-feedback"
+                  aria-live="polite"
+                ></p>
+              </form>
 
-            <li
-              class="menu-item"
-              data-id="burger-aurora"
-              data-name="Aurora Burger"
-              data-price="14.50"
-            >
-              <div class="menu-item-main">
-                <h3 class="menu-item-title">Aurora Burger</h3>
-                <p class="menu-item-desc">
-                  Saftiges Patty, geschmolzener Käse, karamellisierte Zwiebeln,
-                  Aurora-Sauce, dazu hausgemachte Fries.
-                </p>
-              </div>
-              <div class="menu-item-meta">
-                <span class="menu-item-price">14,50&nbsp;€</span>
-                <button
-                  type="button"
-                  class="menu-item-add-btn"
-                  data-add-to-cart
-                >
-                  In den Warenkorb
-                </button>
-              </div>
-            </li>
-
-            <li
-              class="menu-item"
-              data-id="gnocchi-veggie"
-              data-name="Gnocchi Veggie"
-              data-price="13.50"
-            >
-              <div class="menu-item-main">
-                <h3 class="menu-item-title">Gnocchi Veggie</h3>
-                <p class="menu-item-desc">
-                  Kartoffelgnocchi mit geröstetem Gemüse, Rucola und leichtem
-                  Zitronenöl.
-                </p>
-              </div>
-              <div class="menu-item-meta">
-                <span class="menu-item-price">13,50&nbsp;€</span>
-                <button
-                  type="button"
-                  class="menu-item-add-btn"
-                  data-add-to-cart
-                >
-                  In den Warenkorb
-                </button>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="menu-section" aria-labelledby="menu-desserts">
-        <div class="menu-section-inner">
-          <h2 id="menu-desserts" class="menu-category-title">Desserts</h2>
-
-          <ul class="menu-list">
-            <li
-              class="menu-item"
-              data-id="tiramisu-aurora"
-              data-name="Tiramisu Aurora"
-              data-price="7.50"
-            >
-              <div class="menu-item-main">
-                <h3 class="menu-item-title">Tiramisu Aurora</h3>
-                <p class="menu-item-desc">
-                  Klassisches Tiramisu mit Espresso und leichter
-                  Mascarpone-Creme.
-                </p>
-              </div>
-              <div class="menu-item-meta">
-                <span class="menu-item-price">7,50&nbsp;€</span>
-                <button
-                  type="button"
-                  class="menu-item-add-btn"
-                  data-add-to-cart
-                >
-                  In den Warenkorb
-                </button>
-              </div>
-            </li>
-
-            <li
-              class="menu-item"
-              data-id="schokokuchen"
-              data-name="Warmer Schokokuchen"
-              data-price="7.90"
-            >
-              <div class="menu-item-main">
-                <h3 class="menu-item-title">Warmer Schokokuchen</h3>
-                <p class="menu-item-desc">
-                  Lauwarm mit flüssigem Kern, serviert mit Vanilleeis.
-                </p>
-              </div>
-              <div class="menu-item-meta">
-                <span class="menu-item-price">7,90&nbsp;€</span>
-                <button
-                  type="button"
-                  class="menu-item-add-btn"
-                  data-add-to-cart
-                >
-                  In den Warenkorb
-                </button>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- WARENKORB & BESTELLUNG -->
-      <section class="order-section" aria-labelledby="order-heading">
-        <div class="order-section-inner">
-          <h2 id="order-heading">Dein Warenkorb</h2>
-
-          <div id="cart-empty-message" class="cart-empty-message">
-            Dein Warenkorb ist noch leer. Füge Gerichte hinzu, um deine
-            Bestellung zu starten.
-          </div>
-
-          <ul
-            id="cart-items"
-            class="cart-items"
-            aria-live="polite"
-            aria-label="Warenkorbinhalt"
-          >
-            <!-- Dynamisch durch JS gefüllt -->
-          </ul>
-
-          <div class="cart-summary">
-            <div class="cart-summary-row">
-              <span>Zwischensumme</span>
-              <span id="cart-subtotal">0,00&nbsp;€</span>
+              <p class="order-hint">
+                Hinweis: Die Online-Bestellung ist ein Portfolio-Feature. In
+                einer echten Live-Version würde die Bestellung direkt an das
+                Team im Bistro übermittelt und über ein Kassensystem oder E-Mail
+                bearbeitet.
+              </p>
             </div>
-            <div class="cart-summary-row">
-              <span>Liefergebühr</span>
-              <span id="cart-delivery-fee">0,00&nbsp;€</span>
-            </div>
-            <div class="cart-summary-row cart-summary-total">
-              <span>Gesamt</span>
-              <span id="cart-total">0,00&nbsp;€</span>
-            </div>
-          </div>
-
-          <fieldset class="order-mode">
-            <legend>Abholung oder Lieferung?</legend>
-            <label>
-              <input type="radio" name="deliveryMode" value="pickup" checked />
-              Abholung
-            </label>
-            <label>
-              <input type="radio" name="deliveryMode" value="delivery" />
-              Lieferung
-            </label>
-          </fieldset>
-
-          <form id="order-form" class="order-form" novalidate>
-            <div class="form-row">
-              <label for="order-name">Name *</label>
-              <input
-                id="order-name"
-                name="name"
-                type="text"
-                autocomplete="name"
-                required
-              />
-            </div>
-
-            <div class="form-row">
-              <label for="order-phone">Telefon *</label>
-              <input
-                id="order-phone"
-                name="phone"
-                type="tel"
-                autocomplete="tel"
-                required
-              />
-            </div>
-
-            <div class="form-row">
-              <label for="order-email">E-Mail</label>
-              <input
-                id="order-email"
-                name="email"
-                type="email"
-                autocomplete="email"
-              />
-            </div>
-
-            <div class="form-row" id="address-row">
-              <label for="order-address">Adresse (für Lieferung)</label>
-              <textarea id="order-address" name="address" rows="2"></textarea>
-            </div>
-
-            <div class="form-row">
-              <label for="order-notes">Hinweise (optional)</label>
-              <textarea
-                id="order-notes"
-                name="notes"
-                rows="2"
-                placeholder="Allergien, Wunsch-Zeitfenster, Klingelhinweis …"
-              ></textarea>
-            </div>
-
-            <button type="button" id="place-order-btn" class="order-submit-btn">
-              Jetzt verbindlich bestellen
-            </button>
-
-            <p
-              id="order-feedback"
-              class="order-feedback"
-              aria-live="polite"
-            ></p>
-          </form>
-
-          <p class="order-hint">
-            Hinweis: Die Online-Bestellung ist ein Portfolio-Feature. In einer
-            echten Live-Version würde die Bestellung direkt an das Team im
-            Bistro übermittelt und über ein Kassensystem oder E-Mail bearbeitet.
-          </p>
-        </div>
-      </section>
+          </section>
+        </aside>
+      </div>
+      <!-- /.menu-page-layout -->
     </main>
 
     <footer class="site-footer">

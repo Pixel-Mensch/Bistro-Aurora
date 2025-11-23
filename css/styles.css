@@ -2489,3 +2489,171 @@ body {
   color: var(--text-light);
   line-height: 1.6;
 }
+/* Layout: Speisekarte links, Warenkorb rechts */
+.menu-page-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.menu-page-main {
+  flex: 1 1 0;
+  min-width: 0; /* verhindert Overflow bei langen Texten */
+}
+
+/* RECHTE SPALTE: Warenkorb */
+.menu-page-cart {
+  flex: 0 0 340px;
+  max-width: 360px;
+
+  /* WICHTIG: Das Aside selbst sticky machen */
+  position: sticky;
+  top: 2rem; /* Abstand zum oberen Viewport */
+  align-self: flex-start;
+  height: fit-content; /* passt sich der Inhaltshöhe an */
+}
+
+/* Optional: die Order-Section optisch als Karte */
+.menu-page-cart .order-section {
+  margin: 0;
+}
+
+.menu-page-cart .order-section-inner {
+  border-radius: 1rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+/* Responsive: untereinander auf kleineren Screens */
+@media (max-width: 900px) {
+  .menu-page-layout {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .menu-page-cart {
+    position: static; /* sticky auf Handy aus */
+    max-width: 100%;
+  }
+
+  .menu-page-cart .order-section-inner {
+    box-shadow: none;
+  }
+}
+/* Einheitlicher Button-Stil für Speisekarte & Bestellung */
+.menu-item-add-btn,
+.order-submit-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: none;
+
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 700; /* dickere Schrift */
+  letter-spacing: 0.06em; /* etwas Tracking */
+  text-transform: uppercase; /* optional, kannst du auch entfernen */
+
+  background: #bb932f; /* warmes Aurora-Gold */
+  color: #111111; /* gut lesbarer dunkler Text */
+  cursor: pointer;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
+}
+
+.menu-item-add-btn:hover,
+.order-submit-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.45);
+  background: #fde68a; /* etwas heller beim Hover */
+}
+
+.menu-item-add-btn:active,
+.order-submit-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+.menu-item-add-btn:focus-visible,
+.order-submit-btn:focus-visible {
+  outline: 2px solid #cfa333;
+  outline-offset: 3px;
+}
+/* Menükarte als Karten-Layout */
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.menu-item {
+  list-style: none;
+  padding: 1.1rem;
+  border-radius: 1.1rem;
+
+  background: rgba(
+    15,
+    15,
+    22,
+    0.8
+  ); /* leicht transparent, passend zum Aurora-Look */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.menu-item-main {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bild pro Gericht */
+.menu-item-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 0.9rem;
+  margin-bottom: 0.6rem;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* Text & Meta */
+.menu-item-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+}
+
+.menu-item-desc {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.menu-item-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.3rem;
+}
+
+.menu-item-price {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Auf sehr kleinen Screens 1-spaltig */
+@media (max-width: 600px) {
+  .menu-list {
+    grid-template-columns: 1fr;
+  }
+}
