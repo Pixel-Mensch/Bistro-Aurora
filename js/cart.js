@@ -106,22 +106,37 @@
         li.dataset.itemId = item.id;
 
         li.innerHTML = `
-          <div class="cart-item-main">
-            <span class="cart-item-name">${item.name}</span>
-            <span class="cart-item-unit-price">${formatPrice(item.price)}</span>
-          </div>
-          <div class="cart-item-controls">
-            <button type="button" class="cart-qty-btn" data-action="decrease">−</button>
-            <span class="cart-item-quantity">${item.quantity}</span>
-            <button type="button" class="cart-qty-btn" data-action="increase">+</button>
-            <span class="cart-item-total">
-              ${formatPrice(item.price * item.quantity)}
-            </span>
-            <button type="button" class="cart-remove-btn" data-action="remove" aria-label="Artikel entfernen">
-              ×
-            </button>
-          </div>
-        `;
+  <div class="cart-item-header">
+    <span class="cart-item-title">${item.name}</span>
+    <span class="cart-item-price">${formatPrice(
+      item.price * item.quantity
+    )}</span>
+    <button 
+      type="button" 
+      class="cart-item-remove" 
+      data-action="remove" 
+      aria-label="Artikel entfernen"
+    >
+      ×
+    </button>
+  </div>
+
+  <div class="cart-item-controls">
+    <button 
+      type="button" 
+      class="quantity-btn minus" 
+      data-action="decrease"
+    >−</button>
+
+    <span class="cart-item-quantity">${item.quantity}</span>
+
+    <button 
+      type="button" 
+      class="quantity-btn plus" 
+      data-action="increase"
+    >+</button>
+  </div>
+`;
 
         listEl.appendChild(li);
       });

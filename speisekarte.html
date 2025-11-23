@@ -18,28 +18,42 @@
     <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
 
     <header class="site-header">
-      <div class="header-inner">
-        <a
-          href="index.html"
-          class="logo"
-          aria-label="Zur Startseite Bistro Aurora"
-        >
-          <span class="logo-short">BA</span>
-          <span class="logo-text">Bistro Aurora</span>
+      <div class="container header-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">BA</span>
+          <span class="logo-text"
+            >Bistro <span class="logo-highlight">Aurora</span></span
+          >
         </a>
 
-        <nav class="main-nav" aria-label="Hauptnavigation">
+        <div class="header-actions">
+          <button class="theme-toggle">
+            <span class="theme-toggle-icon">🌙</span>
+          </button>
+          <button
+            class="nav-toggle"
+            aria-label="Menü öffnen"
+            aria-expanded="false"
+          >
+            <span class="nav-toggle-bar"></span>
+            <span class="nav-toggle-bar"></span>
+          </button>
+        </div>
+
+        <nav class="main-nav">
           <ul>
             <li><a href="index.html">Start</a></li>
             <li><a href="ueber-uns.html">Über uns</a></li>
             <li>
-              <a href="speisekarte.html" aria-current="page"
+              <a class="is-active" href="speisekarte.html"
                 >Speisekarte &amp; Online-Bestellung</a
               >
             </li>
             <li><a href="galerie.html">Galerie</a></li>
-            <li><a href="index.html#events">Events</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li>
+              <a href="kontakt.html" aria-current="page">Kontakt</a>
+            </li>
           </ul>
         </nav>
       </div>
