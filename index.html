@@ -20,10 +20,7 @@
       content="Warme Atmosphäre, hausgemachte Küche, Aurora Nights und Online-Bestellungen im Bistro Aurora."
     />
     <meta property="og:type" content="website" />
-    <meta
-      property="og:url"
-      content="https://example.com/"
-    />
+    <meta property="og:url" content="https://example.com/" />
     <meta property="og:image" content="Bilder/hero-aurora-1200.jpg" />
 
     <!-- Preload kritischer Ressourcen -->
@@ -92,9 +89,10 @@
       }
     </script>
   </head>
-  <body>
+  <body class="home">
     <a href="#main-content" class="skip-link">Zum Inhalt springen</a>
 
+    <!-- HEADER -->
     <header class="site-header">
       <div class="container header-inner">
         <a href="index.html" class="logo">
@@ -126,15 +124,14 @@
         <nav class="main-nav" aria-label="Hauptnavigation">
           <ul>
             <li>
-              <a
-                href="index.html"
-                class="is-active"
-                aria-current="page"
+              <a href="index.html" class="is-active" aria-current="page"
                 >Start</a
               >
             </li>
             <li><a href="ueber-uns.html">Über uns</a></li>
-            <li><a href="speisekarte.html">Speisekarte &amp; Online-Bestellung</a></li>
+            <li>
+              <a href="speisekarte.html">Speisekarte &amp; Online-Bestellung</a>
+            </li>
             <li><a href="galerie.html">Galerie</a></li>
             <li><a href="events.html">Events</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
@@ -147,109 +144,88 @@
       <!-- HERO -->
       <section class="hero section">
         <div class="container hero-grid">
-          <div class="hero-content">
-            <div class="hero-badge">Dortmund · Seit 2024</div>
-            <h1>
-              Warme Abende im <span class="text-accent">Bistro Aurora</span>
-            </h1>
+          <!-- Linke Seite: Text / CTAs / Info-Karten -->
+          <div class="hero-left">
+            <span class="hero-badge">Dortmund · Seit 2024</span>
+
+            <h1>Warme Abende im Bistro Aurora</h1>
+
             <p class="hero-lead">
               Ein kleiner Ort mit großem Herz: hausgemachte Gerichte, gute
               Drinks und eine Atmosphäre, in der man den Tag einfach hinter sich
               lassen kann – jetzt auch online bestellen.
             </p>
 
-            <div class="hero-meta">
-              <div>
-                <h2>Öffnungszeiten</h2>
-                <p>
-                  Mo–Fr: 11:30 – 22:00 Uhr<br />Sa: 10:00 – 23:00 Uhr · So:
-                  Ruhetag
-                </p>
-              </div>
-              <div>
-                <h2>Adresse</h2>
-                <p>Aurora-Platz 7<br />44135 Dortmund</p>
-              </div>
+            <div class="hero-info-grid">
+              <article class="hero-info-card">
+                <div class="hero-info-icon">⏰</div>
+                <div class="hero-info-body">
+                  <h2 class="hero-info-title">Öffnungszeiten</h2>
+                  <p><strong>Mo–Fr</strong> · 11:30 – 22:00 Uhr</p>
+                  <p><strong>Sa</strong> · 10:00 – 23:00 Uhr</p>
+                  <p><strong>So</strong> · Ruhetag</p>
+                </div>
+              </article>
+
+              <article class="hero-info-card">
+                <div class="hero-info-icon">📍</div>
+                <div class="hero-info-body">
+                  <h2 class="hero-info-title">Adresse</h2>
+                  <p>Aurora-Platz 7</p>
+                  <p>44135 Dortmund</p>
+                </div>
+              </article>
             </div>
 
             <div class="hero-actions">
               <a href="speisekarte.html" class="btn-primary"
                 >Online bestellen</a
               >
-              <a href="reservierung.html" class="btn-ghost"
-                >Tisch reservieren</a
-              >
+              <a href="kontakt.html" class="btn-ghost">Tisch reservieren</a>
             </div>
 
             <p class="hero-note">
-              ✨ Ideal für Date Night, kleine Feiern, entspannte After-Work-Drinks
-              und Abholung/Lieferung nach Hause.
+              ✨ Ideal für Date Night, kleine Feiern, entspannte
+              After-Work-Drinks und Abholung/Lieferung nach Hause.
             </p>
-
-            <a href="#aurora-nights" class="hero-scroll-hint">
-              <span>Mehr zu Aurora Nights</span>
-              <span class="hero-scroll-icon">↓</span>
-            </a>
           </div>
 
-          <div class="hero-media">
+          <!-- Rechte Seite: großes Bild + kleine Karten -->
+          <div class="hero-right hero-media">
             <figure class="hero-main-image">
-              <picture>
-                <source
-                  srcset="
-                    Bilder/hero-aurora-800.webp 800w,
-                    Bilder/hero-aurora-1200.webp 1200w,
-                    Bilder/hero-aurora-1600.webp 1600w
-                  "
-                  sizes="(max-width: 800px) 100vw, 50vw"
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    Bilder/hero-aurora-800.jpg 800w,
-                    Bilder/hero-aurora-1200.jpg 1200w,
-                    Bilder/hero-aurora-1600.jpg 1600w
-                  "
-                  sizes="(max-width: 800px) 100vw, 50vw"
-                  type="image/jpeg"
-                />
-                <img
-                  src="Bilder/hero-aurora.jpg"
-                  alt="Stimmungsvolles Bistro mit warmem Licht und gedeckten Tischen"
-                  loading="eager"
-                  decoding="async"
-                />
-              </picture>
+              <img
+                src="Bilder/about-1.jpg"
+                alt="Stimmungsvolles Bistro Aurora mit warmem Licht und gedeckten Tischen"
+                loading="lazy"
+              />
               <figcaption>
-                Goldenes Licht, leise Musik, entspannte Gespräche.
+                Stimmungsvolles Bistro mit warmem Licht, leiser Musik und
+                gedeckten Tischen.
               </figcaption>
             </figure>
 
             <div class="hero-gallery-mini">
               <figure>
                 <img
-                  src="Bilder/gericht-1.jpg"
-                  alt="Hausgemachtes Gericht im Bistro Aurora"
+                  src="Bilder/gericht-2.jpg"
+                  alt="Frisch zubereiteter Fisch mit Gemüse"
                   loading="lazy"
-                  decoding="async"
                 />
-                <figcaption>Frisch & hausgemacht</figcaption>
+                <figcaption>Frisch &amp; hausgemacht</figcaption>
               </figure>
               <figure>
                 <img
-                  src="Bilder/gericht-2.jpg"
-                  alt="Dessert im Bistro Aurora"
+                  src="Bilder/dessert-1.jpg"
+                  alt="Dessert im Glas"
                   loading="lazy"
-                  decoding="async"
                 />
                 <figcaption>Desserts mit Liebe</figcaption>
               </figure>
               <figure>
                 <img
                   src="Bilder/drinks-1.jpg"
-                  alt="Drinks an der Bar im Bistro Aurora"
+                  alt="Feine Drinks an der Bar"
                   loading="lazy"
-                  decoding="async"
                 />
                 <figcaption>Feine Drinks</figcaption>
               </figure>
@@ -320,9 +296,9 @@
               <li>Limitierte Plätze · Reservierung empfohlen</li>
             </ul>
 
-            <a href="reservierung.html" class="btn-primary btn-small"
-              >Platz für Aurora Night anfragen</a
-            >
+            <a href="reservierung.html" class="btn-primary btn-small">
+              Platz für Aurora Night anfragen
+            </a>
           </div>
 
           <div class="feature-media">
@@ -337,21 +313,26 @@
       </section>
 
       <!-- AURORA NIGHTS SPECIAL -->
-      <section class="section section-aurora-nights reveal-section" id="aurora-nights">
+      <section
+        class="section section-aurora-nights reveal-section"
+        id="aurora-nights"
+      >
         <div class="container aurora-nights-grid">
           <div class="aurora-nights-text">
             <p class="eyebrow">Aurora Nights</p>
             <h2>Einmal im Monat: unser Signature-Abend</h2>
             <p>
-              An Aurora Nights fahren wir das volle Programm: mehr Gänge,
-              mehr Kerzen, abgestimmte Drinks und Zeit für einen Abend, der
-              sich wie ein Kurzurlaub anfühlt – ohne steifes Fine Dining.
+              An Aurora Nights fahren wir das volle Programm: mehr Gänge, mehr
+              Kerzen, abgestimmte Drinks und Zeit für einen Abend, der sich wie
+              ein Kurzurlaub anfühlt – ohne steifes Fine Dining.
             </p>
 
             <div class="aurora-nights-meta">
               <div class="aurora-badge">
                 <span class="aurora-badge-label">Nächster Termin</span>
-                <span class="aurora-badge-value">Jeder 1. Samstag im Monat</span>
+                <span class="aurora-badge-value"
+                  >Jeder 1. Samstag im Monat</span
+                >
               </div>
               <ul class="aurora-facts">
                 <li>3–4 Gänge mit vegetarischer Alternative</li>
@@ -370,8 +351,9 @@
             </div>
 
             <p class="aurora-note">
-              Hinweis: Aurora Nights sind schnell ausgebucht – am besten frühzeitig
-              anfragen. Wir bestätigen deine Reservierung immer noch einmal per Mail.
+              Hinweis: Aurora Nights sind schnell ausgebucht – am besten
+              frühzeitig anfragen. Wir bestätigen deine Reservierung immer noch
+              einmal per Mail.
             </p>
           </div>
 
@@ -448,14 +430,18 @@
           <div class="faq-list" role="list">
             <article class="faq-item" role="listitem">
               <button class="faq-question" aria-expanded="true">
-                <span>Muss ich immer reservieren oder kann ich spontan kommen?</span>
+                <span
+                  >Muss ich immer reservieren oder kann ich spontan
+                  kommen?</span
+                >
                 <span class="faq-icon" aria-hidden="true">+</span>
               </button>
               <div class="faq-answer">
                 <p>
-                  Spontan ist immer möglich, allerdings können wir dir dann keinen Platz
-                  garantieren – besonders am Wochenende und an Aurora Nights.
-                  Für Abende mit Freunden oder ein Date empfehlen wir kurz zu reservieren.
+                  Spontan ist immer möglich, allerdings können wir dir dann
+                  keinen Platz garantieren – besonders am Wochenende und an
+                  Aurora Nights. Für Abende mit Freunden oder ein Date empfehlen
+                  wir kurz zu reservieren.
                 </p>
               </div>
             </article>
@@ -467,9 +453,9 @@
               </button>
               <div class="faq-answer" hidden>
                 <p>
-                  Ja. Du kannst über unsere Speisekarte Gerichte zur Abholung oder
-                  Lieferung bestellen. Lieferung ist aktuell innerhalb unseres
-                  Liefergebiets in Dortmund möglich.
+                  Ja. Du kannst über unsere Speisekarte Gerichte zur Abholung
+                  oder Lieferung bestellen. Lieferung ist aktuell innerhalb
+                  unseres Liefergebiets in Dortmund möglich.
                 </p>
               </div>
             </article>
@@ -481,9 +467,9 @@
               </button>
               <div class="faq-answer" hidden>
                 <p>
-                  Online kannst du bequem über PayPal bezahlen (inkl. Lastschrift,
-                  Kreditkarte, ggf. PayPal Pay Later). Vor Ort akzeptieren wir
-                  EC-/Karte sowie Barzahlung.
+                  Online kannst du bequem über PayPal bezahlen (inkl.
+                  Lastschrift, Kreditkarte, ggf. PayPal Pay Later). Vor Ort
+                  akzeptieren wir EC-/Karte sowie Barzahlung.
                 </p>
               </div>
             </article>
@@ -495,9 +481,10 @@
               </button>
               <div class="faq-answer" hidden>
                 <p>
-                  Für Geburtstage, kleine Firmenabende oder private Runden finden wir fast
-                  immer ein Setup. Schreib uns kurz mit Datum, Uhrzeit und Personenzahl –
-                  wir melden uns mit Vorschlägen zurück.
+                  Für Geburtstage, kleine Firmenabende oder private Runden
+                  finden wir fast immer ein Setup. Schreib uns kurz mit Datum,
+                  Uhrzeit und Personenzahl – wir melden uns mit Vorschlägen
+                  zurück.
                 </p>
               </div>
             </article>
@@ -506,15 +493,18 @@
       </section>
 
       <!-- Newsletter -->
-      <section class="section section-newsletter reveal-section" id="newsletter">
+      <section
+        class="section section-newsletter reveal-section"
+        id="newsletter"
+      >
         <div class="container newsletter-box">
           <div class="newsletter-text">
             <p class="eyebrow">Newsletter</p>
             <h2>„Aurora Nights“ &amp; aktuelle Menüs zuerst erfahren</h2>
             <p>
-              Trage dich ein, wenn du über neue Menüs, Aurora Nights, Events
-              und besondere Abende im Bistro Aurora informiert werden möchtest.
-              Kein Spam, nur gelegentliche Updates.
+              Trage dich ein, wenn du über neue Menüs, Aurora Nights, Events und
+              besondere Abende im Bistro Aurora informiert werden möchtest. Kein
+              Spam, nur gelegentliche Updates.
             </p>
           </div>
 
@@ -561,6 +551,7 @@
       </section>
     </main>
 
+    <!-- FOOTER -->
     <footer class="site-footer">
       <div class="footer-inner">
         <div class="footer-column">
@@ -594,13 +585,10 @@
           </p>
         </div>
       </div>
-
-      <a href="#main-content" class="back-to-top">↑</a>
     </footer>
 
-    <button class="back-to-top" type="button" aria-label="Nach oben">
-      ↑
-    </button>
+    <!-- EINZIGER Back-to-Top-Button -->
+    <button class="back-to-top" type="button" aria-label="Nach oben">↑</button>
 
     <script src="js/core.js" defer></script>
     <script src="js/home.js" defer></script>
