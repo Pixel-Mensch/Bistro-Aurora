@@ -1900,3 +1900,34 @@ body.nav-open .main-nav {
   transform: translateY(0);
   pointer-events: auto;
 }
+.legal-page {
+  font-family: Arial, sans-serif;
+  padding: 40px 20px;
+  background: #fafafa;
+  color: #222;
+}
+
+.legal-page h1 {
+  font-size: 2.4rem;
+  margin-bottom: 20px;
+}
+
+.legal-page h2 {
+  margin-top: 30px;
+  font-size: 1.6rem;
+}
+
+.legal-page h3 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.legal-page p,
+.legal-page li {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.legal-page ul {
+  margin-left: 20px;
+}
