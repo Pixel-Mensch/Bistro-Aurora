@@ -4,6 +4,17 @@
 
 /* Root Variables
    ========================================= */
+:root {
+  --bg: #f4ede4;
+  --text: #2b2b2b;
+  --accent: #7ef5a0;
+  --accent-dark: #44d88b;
+  --brown: #5c4033;
+  --coffee: #4b3621;
+  --light: #ffffff;
+  --soft-purple: #b4a1ff;
+  --soft-blue: #8ac6ff;
+}
 
 :root {
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI",
