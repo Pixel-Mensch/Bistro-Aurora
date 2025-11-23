@@ -1931,3 +1931,279 @@ body.nav-open .main-nav {
 .legal-page ul {
   margin-left: 20px;
 }
+.page-intro {
+  padding: 2rem 1.5rem 1rem;
+}
+
+.page-intro-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.page-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-intro-note {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Menü-Liste */
+.menu-section {
+  padding: 1.5rem 1.5rem 0;
+}
+
+.menu-section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.menu-category-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.menu-item-main {
+  flex: 1 1 auto;
+}
+
+.menu-item-title {
+  font-size: 1.05rem;
+  margin-bottom: 0.25rem;
+}
+
+.menu-item-desc {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.menu-item-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  flex: 0 0 auto;
+}
+
+.menu-item-price {
+  font-weight: 600;
+}
+
+.menu-item-add-btn {
+  padding: 0.35rem 0.9rem;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.menu-item-add-btn:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-1px);
+}
+
+/* Warenkorb */
+.order-section {
+  padding: 2rem 1.5rem 3rem;
+}
+
+.order-section-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1.5rem;
+}
+
+.order-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cart-empty-message {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.cart-items {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.16);
+}
+
+.cart-item-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.cart-item-name {
+  font-size: 0.95rem;
+}
+
+.cart-item-unit-price {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.cart-qty-btn,
+.cart-remove-btn {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  border-radius: 999px;
+  width: 1.7rem;
+  height: 1.7rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.cart-item-quantity {
+  min-width: 1.5rem;
+  text-align: center;
+}
+
+.cart-item-total {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.cart-summary {
+  margin: 1rem 0 1.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.cart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.cart-summary-total {
+  font-weight: 700;
+  margin-top: 0.5rem;
+}
+
+/* Bestellmodus + Formular */
+.order-mode {
+  border: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.order-mode legend {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.order-mode label {
+  margin-right: 1rem;
+  font-size: 0.9rem;
+}
+
+.order-form {
+  display: grid;
+  gap: 0.75rem;
+  max-width: 520px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.form-row label {
+  font-size: 0.9rem;
+}
+
+.form-row input,
+.form-row textarea {
+  padding: 0.45rem 0.6rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(0, 0, 0, 0.25);
+  color: inherit;
+}
+
+.order-submit-btn {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.order-feedback {
+  font-size: 0.9rem;
+  min-height: 1.2em;
+  margin-top: 0.3rem;
+}
+
+.order-feedback--error {
+  color: #ff8080;
+}
+
+.order-feedback--success {
+  color: #8cffb0;
+}
+
+.order-feedback--info {
+  opacity: 0.85;
+}
+
+.order-hint {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* einfache Responsive-Anpassung */
+@media (min-width: 768px) {
+  .menu-item {
+    padding: 1rem 0;
+  }
+
+  .order-section-inner {
+    padding-top: 2rem;
+  }
+}
