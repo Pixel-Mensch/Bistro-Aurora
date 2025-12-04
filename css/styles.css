@@ -787,6 +787,32 @@ body.nav-open .main-nav {
   }
 }
 
+/* Page Intro (für Unterseiten wie Speisekarte)
+   ========================================= */
+
+.page-intro {
+  padding: 4rem 1.5rem 2.5rem;
+}
+
+.page-intro-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.page-intro h1 {
+  margin-bottom: 0.75rem;
+}
+
+.page-intro p {
+  color: var(--color-muted);
+  margin-bottom: 0.5rem;
+}
+
+.page-intro-note {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
 /* Hero-Hintergrund NUR auf der Startseite */
 
 .home .hero {
@@ -1526,6 +1552,33 @@ body.nav-open .main-nav {
   color: var(--color-muted);
 }
 
+/* Über uns – Hero Heading */
+
+.about-heading {
+  max-width: 28rem;
+  line-height: 1.1;
+}
+
+.about-heading-accent {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: clamp(1.8rem, 3vw, 2.1rem);
+  color: var(--color-accent-soft);
+}
+
+/* kleine Aurora Linie darunter */
+
+.about-heading-accent::after {
+  content: "";
+  display: block;
+  width: 4rem;
+  height: 2px;
+  margin-top: 0.45rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--color-accent-soft), transparent);
+  opacity: 0.85;
+}
+
 /* Philosophie-Block mit Bild nebendran */
 
 .about-grid {
@@ -1534,7 +1587,44 @@ body.nav-open .main-nav {
   align-items: center;
 }
 
+/* Über uns – Philosophie Card */
+
+.about-philosophy {
+  padding: 1.6rem 1.8rem;
+  border-radius: 1.3rem;
+  background: radial-gradient(
+      circle at top left,
+      rgba(244, 178, 112, 0.16),
+      transparent 55%
+    ),
+    rgba(5, 8, 18, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  box-shadow: var(--shadow-soft);
+  position: relative;
+  overflow: hidden;
+}
+
 .about-philosophy p {
+  color: var(--color-muted);
+}
+
+/* kleine „Pillars" als Chips */
+
+.about-pillars {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.about-pillars li {
+  font-size: 0.8rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.6);
   color: var(--color-muted);
 }
 
@@ -2339,5 +2429,250 @@ body {
   .footer-inner {
     grid-template-columns: 1fr;
     gap: 1.8rem;
+  }
+}
+
+/* =========================
+   Kontaktseite
+   ========================= */
+
+.contact-hero {
+  padding-top: 4.5rem;
+}
+
+.contact-section {
+  padding-top: 2rem;
+}
+
+.contact-grid {
+  display: grid;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .contact-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.3fr);
+  }
+}
+
+/* linke Spalte: Infos */
+
+.contact-info h2 {
+  margin-bottom: 0.75rem;
+}
+
+.contact-info p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+.contact-info strong {
+  color: var(--color-text);
+}
+
+/* rechte Spalte: Formular als Aurora Card */
+
+.contact-form {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.4rem 1.5rem;
+  border-radius: 1.2rem;
+  background: radial-gradient(
+      circle at top left,
+      rgba(244, 178, 112, 0.16),
+      transparent 60%
+    ),
+    rgba(15, 23, 42, 0.96);
+  border: 1px solid rgba(148, 163, 184, 0.55);
+  box-shadow: var(--shadow-soft);
+  max-width: 480px;
+}
+
+.contact-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.contact-form span {
+  color: var(--color-muted);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.7rem;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.96);
+  color: var(--color-text);
+  outline: none;
+  transition: border-color var(--transition-med),
+    box-shadow var(--transition-med), background var(--transition-med);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: rgba(244, 178, 112, 0.9);
+  box-shadow: 0 0 0 1px rgba(244, 178, 112, 0.4);
+  background: rgba(15, 23, 42, 1);
+}
+
+.contact-form textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+/* Button im Formular links ausrichten */
+
+.contact-form .btn-primary {
+  margin-top: 0.4rem;
+  justify-self: flex-start;
+}
+
+/* =========================
+   Galerie-Seite
+   ========================= */
+
+.gallery-page {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.gallery-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-header h1 {
+  margin-bottom: 0.75rem;
+}
+
+.gallery-header p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* Filter-Buttons */
+
+.gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.gallery-filter-btn {
+  padding: 0.45rem 1rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(148, 163, 184, 0.5);
+  background: rgba(15, 23, 42, 0.85);
+  color: var(--color-text);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background var(--transition-med),
+    border-color var(--transition-med), color var(--transition-med),
+    transform var(--transition-fast);
+}
+
+.gallery-filter-btn:hover {
+  background: rgba(15, 23, 42, 0.95);
+  border-color: rgba(244, 178, 112, 0.6);
+}
+
+.gallery-filter-btn.is-active {
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-soft),
+    var(--color-accent-strong)
+  );
+  border-color: rgba(0, 0, 0, 0.2);
+  color: #111827;
+}
+
+/* Gallery Grid */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 3rem;
+}
+
+.gallery-item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.95);
+  transition: transform var(--transition-med), box-shadow var(--transition-med),
+    border-color var(--transition-med);
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(244, 178, 112, 0.5);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item figcaption {
+  padding: 0.7rem 0.9rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* Responsive */
+
+@media (min-width: 640px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .gallery-item img {
+    height: 260px;
+  }
+}
+
+/* =========================
+   Über uns Feintuning
+   ========================= */
+
+/* Abstand zwischen Hero und "Unsere Philosophie" verkleinern */
+.section.about-hero {
+  padding-bottom: 1.5rem;
+}
+
+/* direkt folgende Section auf der Über uns Seite */
+.section.about-hero + .section {
+  padding-top: 1.5rem;
+}
+
+/* Bildkarte auf Desktop etwas nach oben ziehen */
+@media (min-width: 900px) {
+  .about-grid {
+    align-items: flex-start;
+    column-gap: 3rem;
+  }
+
+  .about-image {
+    margin-top: -1rem;
   }
 }
